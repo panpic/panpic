@@ -1,0 +1,97 @@
+{include file="header.tpl"}
+{include file="sidebar.tpl"}
+<link rel="stylesheet" type="text/css" href="{$base_url}/assets/data/jquery/pickertime/jquery.datetimepicker.css" />
+<script src="{$base_url}/ckeditor/ckeditor.js" charset="utf-8"></script>
+<script src="{$base_url}/ckfinder/ckfinder.js" charset="utf-8"></script>
+
+<div id="content">
+
+    {include file="sidebar_header.tpl"}
+    {include file="breadcrumb.tpl"}
+
+    <div class="innerLR">
+    	
+        <div class="relativeWrap">
+        <form class="margin-none" id="frm_data" name="frm_data" method="post" action="{$base_url_admin}/{$control}/add/" autocomplete="off" enctype="multipart/form-data">
+            {**
+            <input type="hidden" name="data[lang]" id="lang" value="{$data.lang}" />
+            **}
+			<input type="hidden" name="option" id="option" value="{$option}" />
+			<input type="hidden" name="primary" id="primary" value="{$data.blog_id}" />
+			<input type="hidden" name="old[path_image]" value="{$data.path_image}">
+            <input type="hidden" name="old[path_image_thumb]" value="{$data.path_image_thumb}">
+			<input type="hidden" name="old[image_id]" value="{$data.image_id}" />
+            
+            <div class="col-md-9 l-r-0">
+            	{if $alert neq ''} {include file="notes.tpl"} {/if}
+                <div class="widget widget-tabs widget-tabs-double widget-tabs-responsive">
+                    <div class="widget-head">
+                    	<ul>
+                            {foreach from=$items key=k item=l}
+                            <li class="{if $k eq $current_lang}active{/if}">
+                                <a href="#tab1-{$k}" class="glyphicons circle_plus" data-toggle="tab"><i></i><span><img src="{$base_tlp_admin}/images/flag/{$k}.png" /></span><span>{$page_lang[$k]}</span></a>
+                            </li>
+                            {/foreach}
+                        </ul>
+                    </div><!-- .widget-tabs-responsive -->
+                    <div class="widget-body">
+                        <div class="tab-content">
+                            {foreach from=$items key=k item=l}
+                            <div class="tab-pane {if $k eq $current_lang}active{/if}" id="tab1-{$k}">
+                                {include file="portfolio/form-post.tpl" data=$l}
+                            </div>
+                            {/foreach}
+                        </div><!--.tab-content-->
+                    </div>
+                </div>
+            </div><!--.col-md-9-->
+            <div class="col-md-3 widget">
+                {include file="portfolio/right.tpl"}
+            </div><!--.col-md-3-->
+        </form>
+    </div><!--.relativeWrap-->
+    </div>    
+</div>
+
+{include file="footer.tpl"}
+{include file="script_validator.tpl"}
+
+<script src="{$base_tlp_admin}/js/slim.kickstart.min.js"></script>
+<script src="{$base_tlp_admin}/js/slug.js"></script>
+<script type="text/javascript" src="{$base_url}/assets/data/jquery/pickertime/jquery.datetimepicker.js"></script>
+
+<script src="{$base_tlp_admin}/assets/components/common/forms/elements/bootstrap-select/assets/lib/js/bootstrap-select.js?v=v1.0.3-rc2"></script>
+<script src="{$base_tlp_admin}/assets/components/common/forms/elements/bootstrap-select/assets/custom/js/bootstrap-select.init.js?v=v1.0.3-rc2"></script>
+<script src="{$base_tlp_admin}/assets/components/common/forms/elements/select2/assets/lib/js/select2.js?v=v1.0.3-rc2&amp;sv=v0.0.1.1"></script>
+<script src="{$base_tlp_admin}/assets/components/common/forms/elements/select2/assets/custom/js/select2.init.js?v=v1.0.3-rc2&amp;sv=v0.0.1.1"></script>
+<script src="{$base_tlp_admin}/assets/components/common/forms/elements/multiselect/assets/lib/js/jquery.multi-select.js?v=v1.0.3-rc2&amp;sv=v0.0.1.1"></script>
+<script src="{$base_tlp_admin}/assets/components/common/forms/elements/multiselect/assets/custom/js/multiselect.init.js?v=v1.0.3-rc2&amp;sv=v0.0.1.1"></script>
+
+<script>
+    var please_input = "{$lable.please_input}", lable_title = "{$lable.title}";
+{literal}
+$(document).ready (function()
+{
+	$('#date_add').datetimepicker({format:'Y-m-d H:i'});
+	$('#portfolio_year').datetimepicker({format:'Y-m-d',timepicker:false});
+
+	setTimeout(function(){ $(".alert").fadeTo(2000, 500).slideUp(500, function(){ $(".alert").slideUp(500);});}, 2000);
+	
+	$('#btnAddBlog').click(function(e){
+		var flag = 0, errors = '', id_title = $('#id_title').val();
+		
+		if(id_title == '') {
+			flag = 1; errors = please_input+' '+lable_title +'<br />';
+		}
+		
+		if(flag == 1) {
+			$('#content-danger').html(errors);
+			$('#modal-danger').modal('show');
+		} else {
+			$('#frm_data').submit();
+		}
+	});
+});
+{/literal}
+</script>
+<script src="{$base_tlp_admin}/js/editor_fields.js?ver=1.0.2"></script>

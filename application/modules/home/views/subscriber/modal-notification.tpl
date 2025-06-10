@@ -1,0 +1,1 @@
+<div class="modal-content"><div class="modal-header bg--primary text-center"><h4 class="modal-title" id="title-alert">{$lable.modal_title_alert}</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div id="notification-alert">{$lable.send_success}</div></div></div>

@@ -1,0 +1,1 @@
+<div id="fb-root"></div>{literal}<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0&appId=493481457478693&autoLogAppEvents=1" nonce="ORKb0h4w"></script>{/literal}

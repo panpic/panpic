@@ -1,0 +1,47 @@
+.select-option input {
+  margin-left: 30px;
+}
+
+.admin-reply, .contractor-reply {
+  transition: all 1s ease 0s;
+  transform: translateY(900px);
+}
+
+.contractor-reply.show{
+	transform: translateY(-400px); 
+}
+
+.admin-reply.show{
+	transform: translateY(0); 
+}
+
+
+#btn_button {
+  transform: translateY(-460px) translateX(620px);
+  transition: all 1s ease 0s;
+  opacity: 0; 
+}
+
+.box-generic.animated.fadeInUp {
+  height: 700px;
+  overflow: hidden;
+  transition: all 1s ease 0s;
+}
+
+.box-generic.animated.fadeInUp.add-show {
+  height: 100%;
+}
+
+.box-generic.animated.fadeInUp.con-show {
+  height: 760px;
+}
+
+#btn_button.add-show {
+  transform: translateY(0px) translateX(620px);
+  opacity: 1; 
+}
+
+#btn_button.con-show {
+  transform: translateY(-380px) translateX(620px);
+  opacity: 1; 
+}

@@ -1,0 +1,42 @@
+#basic-modal-content {display:none;}
+#basic_2-modal-content {display:none;}
+#baoloi-modal-content {display:none;}
+#support-modal-content {display:none;}
+
+#simplemodal-overlay {background-color:#000; cursor:wait;}
+/* Container */
+#simplemodal-container {min-height:440px;height:auto !important;max-width:600px;width:auto;  color:#000; background-color:#fff; border:4px solid #444; padding:12px; -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+#simplemodal-container .simplemodal-data {padding:8px;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#0175CE;}
+#simplemodal-container a.modalCloseImg {background:url('x.png') no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container h3 {color:#84b8d9;}
+/*Jquery drop sub menu*/
+#nav { float: left; width: auto; font-size:12px; background:#FFFFFF; }
+#nav li{ list-style-type:none; width:200px; }
+#nav li a {	display:block; padding:1px; background:#ccc; border-top: 1px solid #eee; border-bottom: 1px solid #999; text-decoration: none; color: #000; }
+#nav li a:hover, #nav li a.active { background: #999; list-style-type:none; color: #fff; }
+#nav li ul { display: none; /*used to hide sub-menus*/ }
+#nav li ul li { margin-left:-30px; }
+#nav li ul li a { padding: 1px; background: #ececec; border-bottom: 1px dotted #ccc; }
+#sub ul {display:none;}
+#sub li a {display: block; padding: 2px; background: #ccc; border-top: 1px solid #eee; border-bottom: 1px solid #999; text-decoration: none; color: #000; }
+#nav input { width:13px;}
+
+/*tuyen insert estore template*/
+.contact input{height:30px; border:#c4c4c4 solid 1px; line-height:30px;}
+textarea{border:#c4c4c4 solid 1px;}
+.img_ct{ /*border:#ddd solid 1px;*/ }
+input.name{background:url(us.gif) no-repeat 3% 50%; padding-left:25px; line-height:30px}
+input.font{background:url(font.gif) no-repeat 3% 50%; padding-left:25px; line-height:30px}
+input.mail{background:url(mail.gif) no-repeat 3% 50%; padding-left:25px; line-height:30px}
+input.sl{ line-height:30px; text-align:center}
+textarea.ms{background:url(ms.gif) no-repeat 1% 10%; padding-left:25px;}
+input.button3{background:url(buy_button_03.jpg) no-repeat; border:none; width:105px; height:28px; color:#fff}
+input.buttonError{background:url(error_button.png) no-repeat; border:none; width:105px; height:28px; color:#fff}
+.require{color:red}
+.bo{ -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px; }
+/*support online*/
+.namesubport{text-transform: capitalize;padding:3px 5px 3px 20px; font-weight:bold;}
+.phonesubport{text-transform: capitalize;padding:3px 5px 3px 20px; font-weight:bold;}
+h1 { font-size:14px; }

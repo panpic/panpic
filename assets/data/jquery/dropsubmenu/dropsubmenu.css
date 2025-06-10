@@ -1,0 +1,22 @@
+/* CSS Document */
+#nav { float: left; width: auto; font-size:12px;
+	/* border-top: 1px solid #999; border-right: 1px solid #999; border-left: 1px solid #999; */
+}
+#nav li{ list-style-type:none; }
+#nav li a {	
+    display: block; padding: 5px; background: #ccc; 
+	border-top: 1px solid #eee; border-bottom: 1px solid #999;
+    text-decoration: none; color: #000;
+}
+#nav li a:hover, #nav li a.active { background: #999; list-style-type:none; color: #fff; }
+#nav li ul { display: none; /*used to hide sub-menus*/ }
+#nav li ul li { margin-left:-30px; }
+#nav li ul li a { padding: 5px; background: #ececec; border-bottom: 1px dotted #ccc; }
+
+#sub ul { display:none; }
+#sub li a {
+    display: block; padding: 5px; background: #ccc; 
+    border-top: 1px solid #eee; border-bottom: 1px solid #999;
+    text-decoration: none; color: #000;
+}
+#nav input { width:13px;}

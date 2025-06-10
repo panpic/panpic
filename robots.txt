@@ -1,0 +1,4 @@
+Sitemap: https://www.panpic.vn/sitemap.xml
+Sitemap: https://www.panpic.vn/sitemap_index.xml
+User-agent: *
+Disallow:

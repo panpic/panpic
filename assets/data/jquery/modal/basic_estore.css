@@ -1,0 +1,59 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2010 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: basic.css 257 2010-07-27 23:06:56Z emartin24 $
+ */
+
+#basic-modal-content {display:none;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000; cursor:wait;}
+
+/* Container */
+#simplemodal-container {height:auto; width:600px; color:#000; background-color:#fff; border:4px solid #444; padding:12px; -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+#simplemodal-container .simplemodal-data {padding:8px;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalCloseImg {background:url('x.png') no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container h3 {color:#84b8d9;}
+
+
+//Jquery drop sub menu
+#nav { float: left; width: auto; font-size:12px; background:#FFFFFF;
+	/* border-top: 1px solid #999; border-right: 1px solid #999; border-left: 1px solid #999; */
+}
+#nav li{ list-style-type:none; width:200px; }
+#nav li a {	display:block; padding:1px; background:#ccc; border-top: 1px solid #eee; border-bottom: 1px solid #999; text-decoration: none; color: #000; }
+#nav li a:hover, #nav li a.active { background: #999; list-style-type:none; color: #fff; }
+#nav li ul { display: none; /*used to hide sub-menus*/ }
+#nav li ul li { margin-left:-30px; }
+#nav li ul li a { padding: 1px; background: #ececec; border-bottom: 1px dotted #ccc; }
+
+#sub ul {display:none;}
+#sub li a {display: block; padding: 2px; background: #ccc; border-top: 1px solid #eee; border-bottom: 1px solid #999; text-decoration: none; color: #000; }
+#nav input { width:13px;}
+
+/*tuyen insert*/
+input{height:30px; border:#c4c4c4 solid 1px;}
+textarea{border:#c4c4c4 solid 1px;}
+.img_ct{border:#ddd solid 1px;}
+input.name{background:url(us.gif) no-repeat 3% 50%; padding-left:25px; line-height:30px}
+input.font{background:url(font.gif) no-repeat 3% 50%; padding-left:25px; line-height:30px}
+input.mail{background:url(mail.gif) no-repeat 3% 50%; padding-left:25px; line-height:30px}
+input.sl{ line-height:30px; text-align:center}
+textarea.ms{background:url(ms.gif) no-repeat 1% 10%; padding-left:25px;}
+.popup_error{background:url(check.gif) no-repeat 0% 50%}
+input.button3{background:url(buy_button_03.jpg) no-repeat; border:none; width:105px; height:28px; color:#fff}
+.require{color:red}
+.bo{
+   -moz-border-radius: 5px; 
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}

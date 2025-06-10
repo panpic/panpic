@@ -1,0 +1,254 @@
+/* CSS Custom */
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.fl.first {
+    margin-right: 10px;
+}
+.fl.right {
+    width: 34%;
+}
+.selectbox {
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #d6d6d6;
+}
+.box-generic {
+    font-size: 12px;
+    color: #666;
+}
+.box-generic .info-title {
+    font-size: 12px;
+    color: #666;
+}
+.box-generic .info-title strong {
+    font-size: 16px;
+    color: #333;
+}
+.box-generic table td {
+    padding-bottom: 10px;
+}
+.box-generic input {
+    padding: 5px;
+    border: 1px solid #d6d6d6;
+}
+.box-generic .font-error {
+    color: #ff0000;
+}
+.field-error {
+    color: #f00;
+}
+div.field-error span {
+    padding: 5px 0;
+    display: inline-block;
+}
+.pull-right {
+    padding: 10px 0;
+}
+.btn.btn-sm.btn-inverse.pull-right {
+    padding: 5px;
+}
+table td .pull-right {
+    padding: 0;
+}
+.separator {
+    padding: 0;
+    clear: both;
+}
+.note-field {
+   padding: 5px 12px;
+}
+.price {
+    color: #D50000;
+}
+.status.status_1 {
+    color: #FFD705;
+}
+.status.status_2 {}
+.status.status_3 {
+    color: #D50000;
+}
+.pad-left-0 {
+    padding-left: 0 !important;
+}
+.pad-right-0 {
+    padding-right: 0 !important;
+}
+.box-search {
+    border: 1px solid #e2e1e1;
+    padding: 10px;
+}
+.settingcompany .tabs2 .panel-body{
+  padding: 20px 0px;
+}
+.settingcompany .btn-group.bootstrap-select{
+  width: 100%!important;
+  margin-bottom: 15px!important;
+}
+.settingcompany .marbt{
+  margin-bottom: 15px!important;
+}
+.settingcompany .w20{
+  width: 19%;
+  float: left;
+  margin-right: 1%;margin-bottom: 5px;
+}
+.companywebsitesetting .btn-group.bootstrap-select{
+  float: left!important;
+}
+.companywebsitesetting input.form-control{
+  width: 200px!important;
+  margin:0 5px;
+}
+.companywebsitesetting td img{
+  margin-right: 10px;
+}
+.companywebsitesetting thead tr th{
+  text-transform: uppercase;
+}
+.companywebsitesetting table button{
+  margin:0px 15px;
+}
+
+.arrange > input {
+  height: 35px;
+  width: 60px;
+  text-align: center; 
+}
+
+#position {
+  width: 80px;
+  text-align: center; 
+}
+
+
+
+.review-image img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.link{
+  margin-bottom: 5px; 
+}
+
+.review-image {
+  float: left;
+  margin-right: 20px;
+}
+
+.review-name {
+  padding-top: 20px;
+}
+
+.review-head::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.review-head {
+  padding-bottom: 20px;
+}
+
+.account-review {
+  padding: 20px 20px 20px 40px;
+}
+
+.main-content{
+  padding:20px; 
+}
+
+.question {
+  padding: 30px 0;
+}
+
+#button {
+  float: right;
+  margin-top: 5px;
+}
+
+.comments .review-image {
+  margin-top: 10px;
+}
+
+.rating-stars {
+  display: inline-block;
+  width: 130px !important;
+}
+
+.raty.rating-stars > img {
+  border: transparent;
+}
+
+.account-review.review {
+  padding-left: 0;
+}
+
+.review-name .info {
+  padding: 5px 5px 5px 10px;
+}
+
+.review-name .first {
+  margin-top: 20px;
+}
+
+.vote-rating {
+  margin-top: 10px;
+}
+
+.italic {
+  
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+  color: crimson; 
+}
+
+.select-option input {
+  margin-left: 30px;
+}
+
+.comments {
+	padding-left: 70px; 
+	display: none; 
+}
+
+.review-social-info .fa-comments {
+	font-size: 20px; 
+}
+
+.review-social-info .text-cmt {
+	color: lightcoral;
+    margin-right: 20px;
+	cursor: pointer; 
+}
+
+.review-social-info .text-cmt:hover  {
+	text-decoration: underline; 
+}
+
+.comments #button {
+    margin-top: 30px;
+}
+
+.review-meta-data img{
+	width: 100%; 
+}
+
+.review-image img {
+    border-radius: 50%;
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+}
+
+.editcmt{
+	margin-bottom: 30px; 
+	
+}
+

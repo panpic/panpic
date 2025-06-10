@@ -1,0 +1,116 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2010 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: basic.js 254 2010-07-23 05:14:44Z emartin24 $
+ */
+
+jQuery(function ($) {
+	// Load dialog on page load
+	//$('#basic-modal-content').modal();
+
+	// Load dialog on click
+	$('#basic-modal .basic').click(function (e) {
+		var prId = $(this).attr("href");
+		var strCat= '';
+		
+			$.ajax({ type: "POST",   
+				 url: base_url_admin+'productajx/cat/',
+				 async: false,
+				 data: "prId="+prId,
+				 success: function(text){
+					 strCat = text;
+				 }
+			});
+
+		$('#basic-modal-content').modal();
+		$("#prId").val(prId);
+		
+		if(strCat != ''){
+			$("#msg").css("background-color","white");
+			$("#msg").html(strCat);
+		}
+		
+		return false;
+	});
+});
+
+
+function hiddenMap()
+{
+	$('#basic-modal .basic').click(function (e) {
+		var prId = $(this).attr("href");
+		var strCat= '';
+		
+			$.ajax({ type: "POST",   
+				 url: base_url_admin+'productajx/cat/',
+				 async: false,
+				 data: "prId="+prId,
+				 success: function(text){
+					 strCat = text;
+				 }
+			});
+
+		$('#basic-modal-content').modal();
+		
+		//$("#hiddenMap").hide();
+		$("#prId").val(prId);
+		
+		if(strCat != ''){
+			$("#msg").css("background-color","white");
+			$("#msg").html(strCat);
+		}
+		
+		return false;
+	});
+}
+
+
+function setPrdHome(mmId)
+{	
+	var mmStatus;
+	var mmId = mmId;
+	
+	if(document.jpop.mmId.checked) mmStatus = 1;
+	else mmStatus = 0;
+	
+	if(mmId != ''){
+		$.ajax({ type: "POST",   
+			 url: base_url_admin+'productajx/setproducthome/',
+			 async: false,
+			 data: "mmId="+mmId+"&mmStatus="+mmStatus,
+			 success: function(text){
+				$("#updateStatus").html(text);				
+			 }
+		});
+	}
+}
+
+
+function removeMap(mmId)
+{	
+	var mmId = mmId;
+		
+	if(mmId != ''){
+		$.ajax({ type: "POST",   
+			 url: base_url_admin+'productajx/removemap/',
+			 async: false,
+			 data: "mmId="+mmId,
+			 success: function(text){				
+				if(text == 2){
+					$("#updateStatus").html('Remove fail!');
+				}else {					
+					$("#msg").css("background-color","white");
+					$("#msg").html(text);
+				}								
+			 }
+		});
+	}
+}
+

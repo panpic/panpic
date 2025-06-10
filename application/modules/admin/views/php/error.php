@@ -1,0 +1,1 @@
+<div class="well bg-white text-danger strong">{$error}</div>
