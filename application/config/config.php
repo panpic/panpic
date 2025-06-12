@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$weburl = "http://panpicv3.local";
+$weburl = "http://panpic.local";
 $config['base_url']       = $weburl;
 $config['base_url_front'] = $weburl;
 $config['base_tlp_front'] = $weburl."/assets/front";

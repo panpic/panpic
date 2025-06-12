@@ -27,10 +27,25 @@
     },
     "image":
     {
-        "@type":"ImageObject",
-        "url":"{$img_seo}",
-        "width":890,
-        "height":574
+        "@type": "ImageObject",
+            "inLanguage": "vi",
+            "url": "{$img_seo}",
+            "width": "790",
+            "height": "510",
+            "caption": "{$seo.seo_image_alt}",
+            "representativeOfPage": "True",
+            "contentSize": "107.9 Kb",
+            "encodingFormat": ".webp",
+            "description": "{$seo.seo_description|replace:'"':''}",
+            "accessMode": "visual",
+            "license": "{$current_url}",
+            "acquireLicensePage": "{$current_url}",
+            "creditText": "{$seo.seo_image_alt}",
+            "creator": {
+                "@type": "Person",
+                "name": "Bang Andre"
+            },
+            "copyrightNotice": "Panpic"
     },
     "articleSection":"{$seo.articleSection|replace:'"':''}",
     "description":"{$seo.seo_description|replace:'"':''}",

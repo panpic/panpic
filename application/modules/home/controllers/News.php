@@ -87,6 +87,8 @@ class News extends FRONT_Controller
             'articleSection' => $news['cat_name'],
             'datePublished' => date(DATE_ATOM, strtotime($news['date_add'])),
             'dateModified'  => date(DATE_ATOM, $seo_last_update),
+
+            'seo_image_alt' => stripslashes($news['title']),
         );
 
         $this->_data['categories'] = $this->blog_model->getNodeByParentId( $this->_parent_category );
