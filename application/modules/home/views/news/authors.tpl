@@ -162,4 +162,5 @@
         </div>
     </section>
 </main>
+{include file="widget/schema-team.tpl"}
 {include file="footer.tpl"}

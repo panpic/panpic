@@ -155,7 +155,7 @@ class About extends FRONT_Controller
     /**
      * Handle all page for about full screen
      */
-    public function fullScreenPage($slug)
+    function fullScreenPage($slug)
     {
         error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
         // Get data page detail, check exits from database
@@ -193,7 +193,7 @@ class About extends FRONT_Controller
     /**
      * Can bo chu chot
      */
-    public function KeyPerson($slug)
+    function KeyPerson($slug)
     {
         error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
         // Get data page detail, check exits from database
@@ -405,6 +405,46 @@ class About extends FRONT_Controller
         $this->_data['banner'] = $this->main_model->getBanner($this->langUrl, "$page_id");
 
         $this->parser->parse($this->control . "/policy.tpl", $this->_data);
+    }
+
+    /**
+     * Personal
+     * last update 17 Jun 2025
+     * @param $slug
+     * @return mixed
+     * @since 2023
+     */
+    function personal($slug)
+    {
+        error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+        
+        $conPages = "page_slug = '" . $slug . "' ";
+        $page = $this->pages_model->getPageBy($conPages);
+        if (!$page) {
+            return $this->parser->parse("404.tpl", $this->_data);
+        }
+
+        $this->_data['page'] = $page;
+        $page_id = $page['page_id'];
+
+        // Get banner partner
+        $this->_data['partners'] = $this->main_model->getBanners($this->langUrl, 'client', "", false);
+
+        // Set breadcrumb
+        $slugAboutUs = convertSlugByLang(ABOUTUS_SLUG);
+
+        $this->_data['breadcrumb'] = '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">'.$page['page_title'].'</span><meta itemprop="position" content="2" /></li>';
+
+        // Set seo data
+        $this->_data['seo'] = array(
+            'seo_title' => $page['seo_title'],
+            'seo_description' => $page['seo_description'],
+            'seo_image' =>  $this->_data['seo_image_page']
+        );
+
+        $this->_data['banner'] = $this->main_model->getBanner($this->langUrl, "$page_id");
+
+        $this->parser->parse($this->control . "/personal.tpl", $this->_data);
     }
 
 }

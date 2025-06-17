@@ -55,7 +55,7 @@ $route['(khach-hang)'] = 'home/about/partner/$1';
 $route['(cam-ket-chat-luong)'] = 'home/about/policy/$1';
 $route['(dieu-khoan-su-dung)'] = 'home/about/policy/$1';
 $route['(chinh-sach-bao-mat)'] = 'home/about/policy/$1';
-$route['(bang-andre)'] = 'home/about/policy/$1';
+$route['(bang-andre)'] = 'home/about/personal/$1';
 
 /* Contact */
 $route['lien-he'] = 'home/contact/index';
