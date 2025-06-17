@@ -13,6 +13,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta property="fb:app_id" content="493481457478693" />
+	<link rel="alternate" hreflang="vi-VN" href="{$current_url}" />
 	<link rel="icon" type="image/x-icon" href="{$base_url}/favicon.ico" />
 	<meta name='dmca-site-verification' content='b2pvSmE2SlgwdXVpODBlNkNWdjJqdz090' />
 	<meta name="google-site-verification" content="oQESPNhkIzG25Z4HQGL6CgK8W3-2G0AWtuOfvrH48zE" />
@@ -29,9 +30,13 @@
 	{/if}
 	<link rel="stylesheet" href="{$base_tlp_front}/css/main.min.css?ver=7.1">
 	<link rel="stylesheet" href="{$base_tlp_front}/css/custom.min.css?ver=8.3">
+	{if $control eq 'news' && $action eq 'index'}
+	<link rel="stylesheet" href="{$base_tlp_front}/css/prism.min.css?ver=1.0">
+	{/if}
 	<script type="text/javascript" src="{$base_tlp_front}/js/bundle.min.js"></script>
 	<script type="text/javascript" src="{$base_tlp_front}/js/main.min.js"></script>
-	<script type="text/javascript">let base_url="{$base_url}",current_lang="{$current_lang}",base_tlp_front="{$base_tlp_front}";please_input="{$lable.please_input}",title_alert="{$lable.modal_title_alert}",send_success="{$lable.send_success}";</script>{$header_script}
+	<script type="text/javascript">let base_url="{$base_url}",base_tlp_front="{$base_tlp_front}";please_input="{$lable.please_input}",title_alert="{$lable.modal_title_alert}",send_success="{$lable.send_success}";</script>
+	{$header_script}
 {literal}
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6XRPFHJTXC"></script>
 	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-6XRPFHJTXC'); </script>

@@ -1,10 +1,11 @@
-<?php if (!defined('BASEPATH')) {
+<?php 
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
 /**
  * Controllers Frontend
- * Last update 17 May 2025
+ * Last update 17 Jun 2025
  *
  * @package Frontend
  * @copyright PANPIC
@@ -23,7 +24,6 @@ class Services extends FRONT_Controller
         $this->load->model('portfolio_model');
         $this->load->model('blog_model');
 
-
         /*
         // Get portfolio
         $condPortfolio = "  content IS NOT NULL AND content != '' ";
@@ -40,7 +40,7 @@ class Services extends FRONT_Controller
 
         $base_tlp_front = $this->_data['base_tlp_front'];
         $this->_data['header_script'] = '<link rel="stylesheet" href="'.$base_tlp_front.'/css/toc.min.css?ver=2.9">
-                    <script src="'.$base_tlp_front.'/js/toc.min.js?ver=2.6"></script>';
+                    <script src="'.$base_tlp_front.'/js/toc_collapsed.min.js?ver=2.9"></script>';
     }
 
     /**
@@ -191,8 +191,13 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
+
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
@@ -237,8 +242,12 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
@@ -283,8 +292,12 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
@@ -329,8 +342,11 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
@@ -375,8 +391,12 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
@@ -420,8 +440,11 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
@@ -465,8 +488,11 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
@@ -511,8 +537,11 @@ class Services extends FRONT_Controller
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
+        /*
         $this->_data['breadcrumb'] = '
         <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">'.$service['title'].'</span><meta itemprop="position" content="2" /></li>';
+        */
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
 
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],

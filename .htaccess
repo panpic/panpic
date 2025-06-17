@@ -1,0 +1,75 @@
+RewriteEngine on
+Options -Indexes
+RewriteCond %{HTTPS} off
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteCond $1 !^(index\.php|images|assets|files|robots\.txt)
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+# match any URL with www and rewrite it to https without the www
+# RewriteCond %{HTTP_HOST} ^(www\.)(.*) [NC]
+# RewriteRule (.*) https://%2%{REQUEST_URI} [R=301,L]
+# match non https and redirect to https
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+Redirect 301 /cong-ty-thiet-ke-web-panpic https://panpic.vn/gioi-thieu
+Redirect 301 /phan-mem https://panpic.vn/viet-phan-mem-theo-yeu-cau
+Redirect 301 /hosting https://panpic.vn/bang-gia-hosting-host-vps-linux
+Redirect 301 /portfolios https://panpic.vn/du-an
+Redirect 301 /cham-soc-website https://panpic.vn/cham-soc-bao-tri-quan-ly-website
+Redirect 301 /domain https://panpic.vn/bang-gia-ten-mien-website
+Redirect 301 /company/faq https://panpic.vn/faq
+Redirect 301 /blogs/y-kien-phan-hoi-cua-khach-hang https://panpic.vn/du-an/testimonial
+Redirect 301 /company/mau-giao-dien-web https://panpic.vn/mau-giao-dien-web
+Redirect 301 /tuyen-dung https://panpic.vn/tin-tuyen-dung
+Redirect 301 /contact-us https://panpic.vn/lien-he
+#Redirect 301 /thiet-ke-web-app https://panpic.vn/web-blog/thiet-ke-web-app
+#Redirect 301 /phan-mem-quan-ly-tiem-vang https://panpic.vn/web-blog/phan-mem-quan-ly-tiem-vang
+#Redirect 301 /mysql-sua-loi-font-tieng-viet-khi-export-file-csv https://panpic.vn/faq/mysql-sua-loi-font-tieng-viet-khi-export-file-csv
+# Redirect 301 /meo-quang-cao-facebook-hieu-qua https://panpic.vn/faq/meo-quang-cao-facebook-hieu-qua
+# Redirect 301 /thiet-ke-web-gia-re https://panpic.vn/web-blog/thiet-ke-web-gia-re
+Redirect 301 /blogs https://panpic.vn/web-blog
+Redirect 301 /content-management-system https://panpic.vn/cham-soc-bao-tri-quan-ly-website
+Redirect 301 /portfolio/ https://panpic.vn/du-an/
+
+# BEGIN Gzip
+<IfModule mod_deflate.c>
+AddType x-font/woff .woff
+AddType x-font/woff2 .woff2
+AddType x-font/ttf .ttf
+AddType x-font/otf .otf
+AddType x-font/eot .eot
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE x-font/ttf
+AddOutputFilterByType DEFLATE application/x-font-woff
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE font/opentype font/ttf font/eot font/otf font/woff font/woff2
+</IfModule>
+# END Gzip
+
+<ifModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_include handler ^cgi-script$
+</ifModule>

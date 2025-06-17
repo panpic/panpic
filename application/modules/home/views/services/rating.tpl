@@ -1,1 +1,1 @@
-{literal}<script type="application/ld+json">{"@context": "https://schema.org","@type": "CreativeWorkSeries","name": "Thiết Kế Web","aggregateRating":{"@type": "AggregateRating","ratingValue": "4.79","reviewCount": "3979"}}</script>{/literal}
+{literal}<script type="application/ld+json">{"@context": "https://schema.org","@type": "CreativeWorkSeries","name": "Thiết Kế Web","aggregateRating":{"@type": "AggregateRating","ratingValue": "4.9","reviewCount": "3979"}}</script>{/literal}

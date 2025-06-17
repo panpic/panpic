@@ -22,6 +22,8 @@ class News extends FRONT_Controller
     {
         parent::__construct();
         $this->load->model('blog_model');
+        $this->load->library('blog_lib');
+
         $this->_parent_category = POST_CAT_KIENTHUC;
         $this->blog_model->lang = $this->langUrl;
     }
@@ -49,6 +51,7 @@ class News extends FRONT_Controller
         }
 
         $id = $news['blog_id'];
+        $news['content'] = $this->blog_lib->escape_code_blocks($news['content']); 
         $this->_data['news'] = $news;
 
         $category_id = $news['category_id'];

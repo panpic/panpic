@@ -2,7 +2,8 @@
 <main class="main-content" id="main-content">
     <section class="section page">
         <div class="container">
-            {include file="widget/breadcrumb_about.tpl"}
+        {include file="widget/breadcrumb_services.tpl"}
+        {include file="services/breadcrumb/{$action}.tpl"}
             <div class="row">
                 <div class="col-lg-2 mt-5 mt-lg-0"> &nbsp;</div>
                 <div class="col-12 col-xl-10 col-lg-10">
@@ -50,4 +51,5 @@
         </div>
     </section>
 </main>
+{include file="services/rating.tpl"}
 {include file="footer.tpl"}

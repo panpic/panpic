@@ -1,1 +1,1 @@
-{include file="widget/table_content.tpl"}
+{include file="widget/table_content_collapsed.tpl"}

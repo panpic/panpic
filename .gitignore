@@ -1,0 +1,8 @@
+app/
+application/cache/
+application/logs/
+files/
+media/
+server/
+templates_c/
+vendor/
