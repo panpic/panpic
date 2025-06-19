@@ -29,9 +29,9 @@
 	<link rel="stylesheet" href="{$base_tlp_front}/libs/fancybox/jquery.fancybox.min.css">
 	{/if}
 	<link rel="stylesheet" href="{$base_tlp_front}/css/main.min.css?ver=7.1">
-	<link rel="stylesheet" href="{$base_tlp_front}/css/custom.min.css?ver=8.3">
+	<link rel="stylesheet" href="{$base_tlp_front}/css/custom.min.css?ver=8.4">
 	{if $control eq 'news' && $action eq 'index'}
-	<link rel="stylesheet" href="{$base_tlp_front}/css/prism.min.css?ver=1.0">
+	<link rel="stylesheet" href="{$base_tlp_front}/css/prism.min.css?ver=1.1">
 	{/if}
 	<script type="text/javascript" src="{$base_tlp_front}/js/bundle.min.js"></script>
 	<script type="text/javascript" src="{$base_tlp_front}/js/main.min.js"></script>

@@ -100,4 +100,6 @@
 let isiPad = "{$isiPad}";
 {literal}$(document).ready(function(){$('.single-content img').each(function(i){$(this).addClass('img-fluid');});});{/literal}
 </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 {include file="footer.tpl"}

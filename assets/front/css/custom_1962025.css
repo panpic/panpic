@@ -1543,7 +1543,9 @@ font-size:inherit;
 word-break:normal;
 }
 code{
-    word-wrap:break-word;
+color:#d63384;
+font-size:0.875em;
+word-wrap:break-word;
 }
 a > code{color:inherit;}
 kbd{
