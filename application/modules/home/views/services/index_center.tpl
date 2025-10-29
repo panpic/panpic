@@ -14,7 +14,6 @@
                                     <li class="pr-1"><a href="https://www.facebook.com/sharer.php?u={$current_url}&caption={$news.title|stripslashes}" aria-label="Chia sẻ dịch vụ lên facebook" target="_blank" class="text-primary"><i class="fa bi-facebook"></i></a></li>
                                     <li><a href="https://twitter.com/intent/tweet?url={$current_url}&text={$news.title|stripslashes}" aria-label="Chia sẻ dịch vụ lên twitter" target="_blank"><i class="fa bi-twitter"></i></a></li>
                                     <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={$current_url}" aria-label="Chia sẻ dịch vụ lên linkedin" target="_blank"><i class="fa bi-linkedin"></i></a></li>
-                                    <li><div class="zalo-share-button" data-oaid="1069300263628412773" data-layout="2" data-color="blue" data-customize="false"></div></li>
                                 </ul>
                             </div>
                         </div>

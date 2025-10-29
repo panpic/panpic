@@ -1,5 +1,6 @@
 <?php
 
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 error_reporting(1);
 error_reporting(E_ERROR | E_PARSE);
 // error_reporting(E_ALL|E_STRICT);
@@ -118,5 +119,5 @@ if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR)) {
 }
 
 define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
-        
+
 require_once BASEPATH.'core/CodeIgniter.php';

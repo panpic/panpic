@@ -70,8 +70,5 @@
 </div>
 <div class="widget-action-sticky"><a class="widget-action-link" href="{$lable.social_link_zalo}" title="Zalo Panpic" target="_blank"><i class="sprite sprite-zalo"></i></a><a class="widget-action-link" href="https://m.me/100054436721848" title="Messenger Panpic" target="_blank"><i class="sprite sprite-messager"></i></a></div>
 {include file="modal-notification.tpl"}
-{if $control neq 'index'}
-<script src="https://sp.zalo.me/plugins/sdk.js"></script>
-{/if}
 </body>
 </html>
