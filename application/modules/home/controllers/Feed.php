@@ -60,10 +60,10 @@ class Feed extends FRONT_Controller
         $xml->formatOutput=true;
 
         $urlset = $xml->createElement("urlset");
-        $urlset->setAttribute("xmlns","http://www.sitemaps.org/schemas/sitemap/0.9");
-        $urlset->setAttribute("xmlns:image","http://www.google.com/schemas/sitemap-image/1.1");
-        $urlset->setAttribute("xmlns:video","http://www.google.com/schemas/sitemap-video/1.1");
-        $urlset->setAttribute("xmlns:xhtml","http://www.w3.org/1999/xhtml");
+        $urlset->setAttribute("xmlns","https://www.sitemaps.org/schemas/sitemap/0.9");
+        $urlset->setAttribute("xmlns:image","https://www.google.com/schemas/sitemap-image/1.1");
+        $urlset->setAttribute("xmlns:video","https://www.google.com/schemas/sitemap-video/1.1");
+        $urlset->setAttribute("xmlns:xhtml","https://www.w3.org/1999/xhtml");
         $xml->appendChild($urlset);
 
         foreach ($items as $vl) {

@@ -7,7 +7,7 @@
     {if $bn_link}<a href="{$bn_link}">{/if}
     <div class="main-slider-item">
         <figure class="main-slider-thumb thumbnail-centered"><img src="{$link_upload}/{$bn.banner_file}" srcset="{$link_upload}/{$bn.banner_file} 480w, {$link_upload}/{$bn.banner_file} 1080w" sizes="50vw" alt="{$bn.title|stripslashes}"></figure>
-        <div class="main-slider-content"><div class="mb-3">{$lable.seo_h1_home|stripslashes}</div><a class="btn btn-primary text-white" href="https://www.panpic.vn/thiet-ke-web-cong-ty-xay-dung" title="Thiết kế web công ty xây dựng"><span class="me-2">Xem thêm</span><i class="bi bi-arrow-right-circle"></i></a></div>
+        <div class="main-slider-content"><div class="mb-3">{$lable.seo_h1_home|stripslashes}</div><a class="btn btn-primary w-auto mx-auto text-white" href="https://www.panpic.vn/thiet-ke-web-cong-ty-xay-dung" title="Thiết kế web công ty xây dựng"><span class="me-2">Web công ty xây dựng</span><i class="bi bi-arrow-right-circle"></i></a></div>
     </div>
     {if $bn_link}</a>{/if}
 {/foreach}
@@ -18,7 +18,10 @@
 </section>
 <section class="section">
 <div class="container">
-    <div class="heading"><h2 class="heading-title">{$lable.lable_portfolio_typical_projects}</h2></div>
+    <div class="heading d-flex align-items-baseline">
+        <h2 class="heading-title mb-0">{$lable.lable_portfolio_typical_projects}</h2>
+        <span class="ml-3 text-muted font-italic">{$lable.lable_portfolio_typical_project_note|stripslashes}</span>
+    </div>
     <div class="row gx-4">
         {foreach from=$portfolios item=pp}
             {assign var=title value=$pp.title|stripslashes}
@@ -37,7 +40,11 @@
 </section>
 <section class="section-paralax" style="background-image:url({$base_tlp_front}/images/background/paralax.webp);">
 <div class="container">
-    <div class="heading-center justify-content-center"><h3 class="text-uppercase text-center title-focus mb-7 heading-bb">{$lable.menu_services}</h3></div>
+    <div class="heading-center d-flex flex-column align-items-center mb-7">
+        <h3 class="text-uppercase text-center title-focus mb-3 heading-bb">{$lable.menu_services}</h3>
+        <p class="d-block text-muted font-italic">{$lable.home_service_note|stripslashes}</p>
+    </div>
+
     <div class="row justify-content-center">
         {assign var=service_1 value=$services_menu_home[0]}
         {assign var=service_2 value=$services_menu_home[1]}
@@ -65,7 +72,10 @@
 <section class="section">
 <div class="container pt-3">
     <div class="row">
-        <div class="heading-center justify-content-center"><h2 class="heading-title">{$lable.lable_why_choose_us}</h2></div>
+        <div class="heading-center d-flex flex-column align-items-center mb-5">
+            <h2 class="heading-title mb-3">{$lable.lable_why_choose_us}</h2>
+            <p class="d-block text-muted font-italic">{$lable.home_why_note|stripslashes}</p>
+        </div>
         <div class="col-sm-12 col-lg-12">{include file="index/why-home.tpl"}</div>
     </div>
 </div>
@@ -223,10 +233,10 @@
     <div class="container">
         <div class="row">
             <div class="col-8 col-lg-8">
-                <h2>Báo giá thiết kế web?</h2>
+                <h2>{$lable.cta|stripslashes}</h2>
             </div>
-            <div class="col-4 col-lg-3">
-                <a href="https://www.panpic.vn/lien-he" class="btn btn-warning">Liên hệ</a>
+            <div class="col-4 col-lg-4">
+                <a href="https://www.panpic.vn/lien-he" class="btn btn-warning">Nhận tư vấn kỹ thuật</a>
             </div>
         </div>
     </div>

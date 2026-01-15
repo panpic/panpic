@@ -36,7 +36,7 @@ $config['domain_cookie'] = 'panpic.vn';
 $config['prefix_cookie'] = 'panpic_';
 
 $config['user_cookie']      = 'user_set';
-$config['user_path']        = '/'; 
+$config['user_path']        = '/';
 $config['user_expire']      = time()+86500;
 
 $config['session_enduser']  = 'userData';
@@ -61,8 +61,8 @@ $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
 
-$config['log_threshold'] = 0;
-$config['log_path'] = '';
+$config['log_threshold'] = 4;
+$config['log_path'] = FCPATH . '/application/logs/';
 $config['log_file_extension'] = '';
 $config['log_file_permissions'] = 0644;
 $config['log_date_format'] = 'Y-m-d H:i:s';
