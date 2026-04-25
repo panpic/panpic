@@ -2401,7 +2401,7 @@ a{transition:all 0.25s}
 .thumbnail-centered{display:block;height:0;margin-bottom:0;overflow:hidden;position:relative}
 .thumbnail-centered > img{height:100%;left:50%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;position:absolute;top:50%;transform:translate(-50%, -50%);width:100%;z-index:1;content-visibility:auto;visibility:visible}
 .thumbnail--1x1{padding-bottom:100% !important}
-.thumbnail--4x3{padding-bottom:75% !important}
+.thumbnail--4x3{padding-bottom:60% !important}
 .thumbnail--3x4{padding-bottom:110% !important}
 .thumbnail--6x4{padding-bottom:62.5% !important}
 .thumbnail--16x9{padding-bottom:56.25% !important}

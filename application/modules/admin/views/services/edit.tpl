@@ -24,7 +24,9 @@
                             <ul>
                                 {foreach from=$items key=k item=l}
                                 <li class="{if $k eq $current_lang}active{/if}">
-                                    <a href="#tab1-{$k}" class="glyphicons circle_plus" data-toggle="tab"><i></i><span><img src="{$base_tlp_admin}/images/flag/{$k}.png" /></span><span>{$page_lang[$k]}</span></a>
+                                    <a href="#tab1-{$k}" class="glyphicons circle_plus" data-toggle="tab">
+                                        <i></i><span><img src="{$base_tlp_admin}/images/flag/{$k}.png" /></span><span>{$page_lang[$k]}</span>
+                                    </a>
                                 </li>
                                 {/foreach}
                             </ul>
@@ -45,7 +47,7 @@
                 </div><!--.col-md-3-->
             </form>
         </div><!--.relativeWrap-->
-        
+
         {**
         <form class="margin-none" id="frm_data" name="frm_data" method="post" action="{$base_url_admin}/{$control}/add/" autocomplete="off" enctype="multipart/form-data">
             <input type="hidden" name="data[lang]" id="lang" value="{$data.lang}" />
@@ -64,11 +66,11 @@
                         </div>
                     </div><!-- // Row END -->
                     </div>
-                    <div class="separator"></div>                    
+                    <div class="separator"></div>
                 </div>
             </div><!-- // Widget END -->
         </form>**}
-    </div>    
+    </div>
 </div>
 
 {include file="footer.tpl"}
@@ -79,18 +81,18 @@
 <script type="text/javascript" src="{$base_url}/assets/data/jquery/pickertime/jquery.datetimepicker.js"></script>
 <script>
 {literal}
-$(document).ready (function(){ 
+$(document).ready (function(){
 
 	$('#date_add').datetimepicker({format:'Y-m-d H:i'});
 	setTimeout(function(){ $(".alert").fadeTo(2000, 500).slideUp(500, function(){ $(".alert").slideUp(500); }); }, 2000);
-	
-	$('#btnAddBlog').click(function(e){ 
+
+	$('#btnAddBlog').click(function(e){
 		var flag = 0, errors = '', id_title = $('#id_title').val();
-		
+
 		if(id_title == '') {
 			flag = 1; errors = please_input+' '+lable_title +'<br />';
 		}
-		
+
 		if(flag == 1) {
 			$('#content-danger').html(errors);
 			$('#modal-danger').modal('show');

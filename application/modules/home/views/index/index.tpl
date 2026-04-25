@@ -42,7 +42,7 @@
 <div class="container">
     <div class="heading-center d-flex flex-column align-items-center mb-7">
         <h3 class="text-uppercase text-center title-focus mb-3 heading-bb">{$lable.menu_services}</h3>
-        <p class="d-block text-muted font-italic">{$lable.home_service_note|stripslashes}</p>
+        <p class="d-block text-muted font-italic text-center">{$lable.home_service_note|stripslashes}</p>
     </div>
 
     <div class="row justify-content-center">

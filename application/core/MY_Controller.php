@@ -95,6 +95,8 @@ Class MY_Controller extends CI_Controller
         $this->load->library('data_library');
 
         $this->_data['current_url_lang'] = current_url();
+
+        $this->load->helper('cache_helper');
     }
 
     /*
@@ -103,9 +105,9 @@ Class MY_Controller extends CI_Controller
     private function _check_login() {
         $controller = $this->uri->rsegment('1');
         $controller = strtolower($controller);
-        $action = $this->uri->rsegment('2'); 
-        $action = strtolower($action); 
-    
+        $action = $this->uri->rsegment('2');
+        $action = strtolower($action);
+
         $login = $this->session->userdata('login');
         //neu ma chua dang nhap,ma truy cap 1 controller khac login
         if(!$login && $controller != 'login')
@@ -135,7 +137,5 @@ Class MY_Controller extends CI_Controller
         }
         return $langArr;
     }
-    
+
 }
-
-

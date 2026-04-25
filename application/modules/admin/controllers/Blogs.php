@@ -23,7 +23,7 @@ class Blogs extends MY_Controller{
 
         $this->_post_type = POST_TYPE_BLOG;
         $this->_blog_parent_category = PARENT_CAT_BLOG;
-            
+
         $this->_data['dir_path']  = $this->_path_upload;
         $this->_data['link_upload']  = $this->_link_upload;
 
@@ -52,15 +52,15 @@ class Blogs extends MY_Controller{
         $super_admin = $this->config->item("super_admin");
         if($session_admin->adminRole != $super_admin) {
             if($this->admin_permission->myPermission($this->_control, $adminPermission) == false) {
-                redirect(admin_url('index/notpermission')); 
+                redirect(admin_url('index/notpermission'));
             }
         }
     }
-        
-	
+
+
     /**
      * Form add / edit
-     * 
+     *
      */
     function index(){
         error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
@@ -110,7 +110,7 @@ class Blogs extends MY_Controller{
 
         $this->_data['alert'] = $this->session->flashdata('alert');
         $this->_data['msg'] = $this->session->flashdata('msg');
-        
+
         if (!empty($id) && $option == 'edit') {
             $this->parser->parse("blogs/edit.tpl", $this->_data);
         } else {
@@ -121,7 +121,7 @@ class Blogs extends MY_Controller{
         // $file_info = getimagesize($img); //pathinfo($img);
     }
 
-        
+
     /**
      * Process add / edit
      */
@@ -159,7 +159,7 @@ class Blogs extends MY_Controller{
             'avail'         => ACTIVE,
             'admin_verify'  => ADMIN_BLOG_VERIFY
         );
-        
+
         //@ Validation
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
@@ -234,6 +234,9 @@ class Blogs extends MY_Controller{
                 $this->blogs_model->insertUpdateTags($_tags_value);
                 $this->session->set_flashdata('alert', 'success');
                 $this->session->set_flashdata('msg', $this->lable['edit_succ']);
+
+                clear_homepage_cache();
+
                 redirect(admin_url("blogs/items"));
             } else {
                 $this->session->set_flashdata('alert', 'danger');
@@ -249,6 +252,9 @@ class Blogs extends MY_Controller{
                 $this->blogs_model->insertUpdateTags($_tags_value);
                 $this->session->set_flashdata('alert', 'success');
                 $this->session->set_flashdata('msg', $this->lable['add_succ']);
+
+                clear_homepage_cache();
+
                 redirect(admin_url("blogs"));
             } else {
                 $this->_data['alert'] = 'danger';
@@ -353,7 +359,7 @@ class Blogs extends MY_Controller{
 		$tab = $this->input->get('t');
         $tab = ($tab == '') ? BLOG_TAB_ACTIVE : $tab;
         $this->_data['tab'] = $tab;
-        
+
         $cond = '';
         $more_url = "&t=$tab";
         $keyword = trim(strip_tags($keyword));
@@ -362,7 +368,7 @@ class Blogs extends MY_Controller{
             $more_url .= "&q=$keyword";
             $this->_data['search'] = $keyword;
         }
-        
+
         if($category) {
             $cond .= " AND a.category_id = $category ";
             $more_url .= ($more_url == '') ? "cat=$category" : "&cat=$category";
@@ -371,7 +377,7 @@ class Blogs extends MY_Controller{
 
         $this->_data['alert'] = '';
         $this->_data['breadcrumb'] = $this->lable['post_knowledge'];
-        
+
         if($tab == BLOG_TAB_UNVERIFY) {
             $cond .= " AND a.admin_verify = 0 ";
         }
@@ -398,14 +404,14 @@ class Blogs extends MY_Controller{
 
         $totalItems  = $this->blogs_model->countItems($cond_total);
         $per_page    = $this->lable['per_item_admin'];
-        $base_url    = admin_url('blogs/items'); 
+        $base_url    = admin_url('blogs/items');
         $uri_segment = 4;
-        $this->load->library('pagination_library'); 
+        $this->load->library('pagination_library');
         $this->pagination_library->pagination($base_url, $totalItems, $per_page, $uri_segment, $more_url);
         $this->_data['links'] = $this->pagination->create_links();
-        
+
         $curpage = $this->input->get('per_page');
-        $offset = ($curpage) ? $curpage : 0;      
+        $offset = ($curpage) ? $curpage : 0;
         $start = ($offset > 0) ? (($offset - 1) * $per_page) : $offset;
         $items = $this->blogs_model->getItems($cond_items, $per_page, $start);
         $this->_data['items'] = $items;
@@ -415,7 +421,7 @@ class Blogs extends MY_Controller{
         $categories = $this->postcat_model->getNodeByParentId($this->_blog_parent_category, $cond);
         $arrNested = $this->nestedpostcat_library->cmbNested($categories, 'sub', $category, 1);
         $this->_data['categories'] = $arrNested;
-        
+
         $this->_data['alert'] = $this->session->flashdata('alert');
         $this->_data['msg'] = $this->session->flashdata('msg');
 
@@ -428,7 +434,7 @@ class Blogs extends MY_Controller{
      */
     function deletemulti() {
         error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
-        
+
         $checkAll = $this->input->post('checkAll');
         foreach ($checkAll as $id) {
             $this->blogs_model->id = $id;
@@ -484,10 +490,10 @@ class Blogs extends MY_Controller{
 
     /**
      * Ajx update avail
-     * 
+     *
      * @param int $id
      * @param int $s
-     * 
+     *
      * @return bool
      */
     function update_status() {
@@ -495,20 +501,20 @@ class Blogs extends MY_Controller{
         $blog_id = $this->input->post('id');
         $avail = $this->input->post('s');
         $avail = ($avail == 1) ? 0 : 1;
-        
+
         if($blog_id != '') {
             $this->blogs_model->id = $blog_id;
             echo $this->blogs_model->updateBlogByFields(array('avail'=>$avail));
             die();
         }
-        
+
         echo 0;
         die();
     }
 
     /**
      * Ajx update display home
-     * 
+     *
      * @param int $id
      * @param int $d
      * @return bool
@@ -518,13 +524,13 @@ class Blogs extends MY_Controller{
         $blog_id = $this->input->post_get('id');
         $display_home = $this->input->post_get('d');
         $display_home = ($display_home == 1) ? 1 : 0;
-        
+
         if($blog_id != '') {
             $this->blogs_model->id = $blog_id;
             echo $this->blogs_model->updateBlogByFields( array('admin_verify' => $display_home) );
             die();
         }
-        
+
         echo 0;
         die();
     }

@@ -17,6 +17,9 @@
 	<link rel="icon" type="image/x-icon" href="{$base_url}/favicon.ico" />
 	<meta name='dmca-site-verification' content='b2pvSmE2SlgwdXVpODBlNkNWdjJqdz090' />
 	<meta name="google-site-verification" content="oQESPNhkIzG25Z4HQGL6CgK8W3-2G0AWtuOfvrH48zE" />
+	{if $control eq 'search'}
+		<meta name="robots" content="noindex, follow">
+	{/if}
 	{if $seo.seo_image neq ''}{assign var=img_seo value=$seo.seo_image}{else}{assign var=img_seo value="`$lable.avatar_default`"}{/if}
 	<meta property="og:url" content="{$current_url}"/>
 	<meta property="og:type" content="article"/>
@@ -28,7 +31,7 @@
 	{if $control neq 'services' && $control neq 'index'}
 	<link rel="stylesheet" href="{$base_tlp_front}/libs/fancybox/jquery.fancybox.min.css">
 	{/if}
-	<link rel="stylesheet" href="{$base_tlp_front}/css/main.min.css?ver=7.2">
+	<link rel="stylesheet" href="{$base_tlp_front}/css/main.min.css?ver=7.3">
 	<link rel="stylesheet" href="{$base_tlp_front}/css/custom.min.css?ver=8.5">
 	{if $control eq 'news' && $action eq 'index'}
 	<link rel="stylesheet" href="{$base_tlp_front}/css/prism.min.css?ver=1.1">

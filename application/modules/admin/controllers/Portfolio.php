@@ -28,7 +28,7 @@ class Portfolio extends MY_Controller{
         $this->_blog_parent_category = PARENT_CAT_PORTFOLIO;
         $this->_cat_portoflio_pos = PARENT_CAT_PORTFOLIO_POS;
         $this->_cat_portfolio_services = PARENT_CAT_PORTFOLIO_SERVICES;
-            
+
         $this->load->model('services_model');
         $this->load->model('postcat_model');
         $this->load->library('slim_library');
@@ -63,7 +63,7 @@ class Portfolio extends MY_Controller{
         $super_admin = $this->config->item("super_admin");
         if($session_admin->adminRole != $super_admin) {
             if($this->admin_permission->myPermission($this->_control, $adminPermission) == false) {
-                redirect(admin_url('index/notpermission')); 
+                redirect(admin_url('index/notpermission'));
             }
         }
     }
@@ -110,7 +110,7 @@ class Portfolio extends MY_Controller{
         }
 
         $this->postcat_model->_lang = $this->current_lang;
-        
+
         $categories = $this->postcat_model->getNodeByParentId($this->_blog_parent_category);
         $arrNested = $this->nestedpostcat_library->cmbNested($categories, $sub, $cId, 1);
         $this->_data['categories'] = $arrNested;
@@ -182,7 +182,7 @@ class Portfolio extends MY_Controller{
             'avail'         => ACTIVE,
             'admin_verify'  => ADMIN_BLOG_VERIFY,
         );
-        
+
         //@ Validation
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
@@ -244,6 +244,9 @@ class Portfolio extends MY_Controller{
                 $this->do_slim_upload($id);
                 $this->session->set_flashdata('alert', 'success');
                 $this->session->set_flashdata('msg', $this->lable['edit_succ']);
+
+                clear_homepage_cache();
+
                 redirect( admin_url($this->_control."/items/") );
             } else {
                 $this->session->set_flashdata('alert', 'danger');
@@ -258,6 +261,7 @@ class Portfolio extends MY_Controller{
                 $this->do_slim_upload($insert);
                 $this->session->set_flashdata('alert', 'success');
                 $this->session->set_flashdata('msg', $this->lable['add_succ']);
+                clear_homepage_cache();
                 redirect( admin_url($this->_control) );
             } else {
                 $this->_data['alert'] = 'danger';
@@ -368,7 +372,7 @@ class Portfolio extends MY_Controller{
             $more_url .= "q=$keyword";
             $search['q'] = $keyword;
         }
-        
+
         if($category) {
             $cond .= " AND a.category_id = $category ";
             $more_url .= ($more_url == '') ? "cat=$category" : "&cat=$category";
@@ -379,7 +383,7 @@ class Portfolio extends MY_Controller{
 
         $this->_data['alert'] = '';
         $this->_data['breadcrumb'] = $this->lable['admin_portfolio'];
-        
+
         if($tab == BLOG_TAB_UNVERIFY) {
             $cond .= " AND a.admin_verify = 0 ";
         }
@@ -408,12 +412,12 @@ class Portfolio extends MY_Controller{
         $per_page    = $this->lable['per_item_admin'];
         $base_url    = admin_url($this->_control.'/items');
         $uri_segment = 4;
-        $this->load->library('pagination_library'); 
+        $this->load->library('pagination_library');
         $this->pagination_library->pagination($base_url, $totalItems, $per_page, $uri_segment, $more_url);
         $this->_data['links'] = $this->pagination->create_links();
-        
+
         $curpage = $this->input->get('per_page');
-        $offset = ($curpage) ? $curpage : 0;      
+        $offset = ($curpage) ? $curpage : 0;
         $start = ($offset > 0) ? (($offset - 1) * $per_page) : $offset;
         $items = $this->services_model->getItems($cond_items, $per_page, $start);
         $this->_data['items'] = $items;
@@ -434,7 +438,7 @@ class Portfolio extends MY_Controller{
      */
     function deletemulti() {
         error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
-        
+
         $checkAll = $this->input->post('checkAll');
         foreach ($checkAll as $id) {
             $this->services_model->id = $id;
@@ -517,10 +521,10 @@ class Portfolio extends MY_Controller{
 
     /**
      * Ajx update avail
-     * 
+     *
      * @param int $id
      * @param int $s
-     * 
+     *
      * @return bool
      */
     function update_status() {
@@ -528,20 +532,20 @@ class Portfolio extends MY_Controller{
         $blog_id = $this->input->post('id');
         $avail = $this->input->post('s');
         $avail = ($avail == 1) ? 0 : 1;
-        
+
         if($blog_id != '') {
             $this->services_model->id = $blog_id;
             echo $this->services_model->updateBlogByFields(array('avail'=>$avail));
             return;
         }
-        
+
         echo 0;
         return;
     }
-    
+
     /**
      * Ajx update display home
-     * 
+     *
      * @param int $id
      * @param int $d
      * @return bool
@@ -551,13 +555,13 @@ class Portfolio extends MY_Controller{
         $blog_id = $this->input->post_get('id');
         $display_home = $this->input->post_get('d');
         $display_home = ($display_home == 1) ? 1 : 0;
-        
+
         if($blog_id != '') {
             $this->services_model->id = $blog_id;
             echo $this->services_model->updateBlogByFields( array('admin_verify' => $display_home) );
             return;
         }
-        
+
         echo 0;
         return;
     }
