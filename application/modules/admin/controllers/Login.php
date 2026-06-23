@@ -2,7 +2,7 @@
 /**
 * Controllers Backend login
 * Last update 12 Nov 2018
-* 
+*
 * @package backend
 * @copyright PANPIC
 * @author contact@panpic.vn
@@ -13,9 +13,9 @@
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login extends MY_Controller{
-	
 
-	
+
+
 	public function __construct(){
 		parent::__construct();
 		$this->load->library('form_validation');
@@ -59,7 +59,7 @@ class Login extends MY_Controller{
         if($this->login_model->check_exists($where)) {
             return true;
         }
-        
+
         $this->form_validation->set_message(__FUNCTION__, 'User name / Password is not matched');
         return false;
     }
@@ -86,6 +86,9 @@ class Login extends MY_Controller{
            //neu thanh vien da dang nhap thi xoa session login
            $this->session->unset_userdata('login');
         }
+
+        setcookie('ckf_auth_token', '', time() - 3600, '/');
+        
         $this->session->set_flashdata('flash_message', 'Đăng xuất thành công');
         redirect();
     }

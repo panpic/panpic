@@ -97,6 +97,14 @@ Class MY_Controller extends CI_Controller
         $this->_data['current_url_lang'] = current_url();
 
         $this->load->helper('cache_helper');
+
+        $login = $this->session->userdata('login');
+        if($login->adminLogin){
+            $username = $login->adminLogin;
+            // Tạo 1 cookie riêng cho CKFinder, sống 2 tiếng (7200s), path '/' để dùng toàn web
+            $ckf_token = md5($username . 'ckfinder_locnuocbachkhoa');
+            setcookie('ckf_auth_token', $ckf_token, time() + 7200, '/');
+        }
     }
 
     /*

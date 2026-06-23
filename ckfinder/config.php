@@ -26,19 +26,25 @@ $config = array();
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_authentication
 
 $config['authentication'] = function () {
-    return true;
+
+    if (isset($_COOKIE['ckf_auth_token'])) {
+        // Kiểm tra (Tùy chọn): Bạn có thể query DB hoặc kiểm tra độ dài chuỗi để an toàn hơn
+        return true;
+    }
+
+    return false;
 };
 
 /*============================ License Key ============================================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = 'panpicv3.local';
-$config['licenseKey']  = '*Q?S-*1**-X**C-*Y**-*V**-8*V*-2**G';
+// $config['licenseName'] = 'panpicv3.local';
+// $config['licenseKey']  = '*Q?S-*1**-X**C-*Y**-*V**-8*V*-2**G';
 
-/*
-$config['licenseName'] = 'panpic.vn'; // 'panpicv3.local';
-$config['licenseKey']  = '*3?5-*1**-8**B-*9**-*A**-A*W*-3**7'; // '*Q?S-*1**-X**C-*Y**-*V**-8*V*-2**G';
-*/
+
+$config['licenseName'] = 'panpic.vn';
+$config['licenseKey']  = '*3?5-*1**-8**B-*9**-*A**-A*W*-3**7';
+
 
 /*============================ CKFinder Internal Directory ============================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_privateDir
@@ -73,15 +79,15 @@ $userDirectory = ''; // date('Y');
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-	
-
-	'baseUrl'      => 'http://panpicv3.local/media/'.$userDirectory,
-    'root'         => 'C:/xampp/htdocs/2022/panpic-v3/media/'.$userDirectory,
 
     /*
+	'baseUrl'      => 'http://panpicv3.local/media/'.$userDirectory,
+    'root'         => 'C:/xampp/htdocs/2022/panpic-v3/media/'.$userDirectory,
+    */
+
     'baseUrl'      => 'https://panpic.vn/media/'.$userDirectory,
     'root'         => '/home/panpic/public_html/media/'.$userDirectory,
-    */
+
 
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,

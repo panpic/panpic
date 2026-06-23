@@ -51,7 +51,7 @@ class News extends FRONT_Controller
         }
 
         $id = $news['blog_id'];
-        $news['content'] = $this->blog_lib->escape_code_blocks($news['content']); 
+        $news['content'] = $this->blog_lib->escape_code_blocks($news['content']);
         $this->_data['news'] = $news;
 
         $category_id = $news['category_id'];
@@ -165,7 +165,9 @@ class News extends FRONT_Controller
         $this->_data['tags'] = $tags;
 
         if($category_id == PARENT_CAT_VIDEO){
+
             $this->parser->parse( $this->control."/index_video.tpl", $this->_data);
+
         } else {
 
             if($category_id != 13) {
