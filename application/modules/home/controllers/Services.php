@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
@@ -59,7 +59,7 @@ class Services extends FRONT_Controller
         /* Get data news detail, check exits from database */
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -123,7 +123,7 @@ class Services extends FRONT_Controller
 
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -138,11 +138,11 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "a.seo_title, a.seo_description, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
-                            
+
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
         $this->_data['services'] = $services;
 
@@ -169,7 +169,7 @@ class Services extends FRONT_Controller
         /* Get data news detail, check exits from database */
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -184,8 +184,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -220,7 +220,7 @@ class Services extends FRONT_Controller
         /* Get data news detail, check exits from database */
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -235,8 +235,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -270,7 +270,7 @@ class Services extends FRONT_Controller
         /* Get data news detail, check exits from database */
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -285,8 +285,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -320,7 +320,7 @@ class Services extends FRONT_Controller
         /* Get data news detail, check exits from database */
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -335,8 +335,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -369,7 +369,7 @@ class Services extends FRONT_Controller
         /* Get data news detail, check exits from database */
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -384,8 +384,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -418,7 +418,7 @@ class Services extends FRONT_Controller
 
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -433,8 +433,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -466,7 +466,7 @@ class Services extends FRONT_Controller
 
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -481,8 +481,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -515,7 +515,7 @@ class Services extends FRONT_Controller
         /* Get data news detail, check exits from database */
         $post_type = POST_TYPE_SERVICES;
         $conService = "JOIN view_category AS c
-                        ON a.category_id = c.post_cat_id 
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND c.post_cat_id = $cat_id ";
 
@@ -530,8 +530,8 @@ class Services extends FRONT_Controller
         $this->main_model->updateHit($id);
 
         $field = "c.cat_slug, c.post_cat_id, c.cat_name, a.short, a.path_image ";
-        $conds = "JOIN view_category AS c 
-                        ON a.category_id = c.post_cat_id 
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
                             AND a.post_type = '$post_type'
                             AND a.blog_id <> $id";
         $services = $this->blog_model->getBlogServicesItems($conds, $field);
@@ -550,6 +550,51 @@ class Services extends FRONT_Controller
         );
 
         $this->parser->parse($this->control."/index.tpl", $this->_data);
+    }
+
+    function ai_hub()
+    {
+        error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+        $cat_id = 40;
+
+        if (!$cat_id) {
+            return $this->parser->parse("404.tpl", $this->_data);
+        }
+
+        $post_type = POST_TYPE_SERVICES;
+        $conService = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
+                            AND a.post_type = '$post_type'
+                            AND c.post_cat_id = $cat_id ";
+
+        $service = $this->blog_model->getBlogServicesByQuery($conService);
+
+        if (!$service) {
+            return $this->parser->parse("404.tpl", $this->_data);
+        }
+
+        $id = $service['blog_id'];
+        $this->_data['service'] = $service;
+        $this->main_model->updateHit($id);
+
+        $field = "a.seo_title, a.seo_description, a.path_image ";
+        $conds = "JOIN view_category AS c
+                        ON a.category_id = c.post_cat_id
+                            AND a.post_type = '$post_type'
+                            AND a.blog_id <> $id";
+
+        $services = $this->blog_model->getBlogServicesItems($conds, $field);
+        $this->_data['services'] = $services;
+
+        $this->_data['breadcrumb'] = '<li class="active"><span>'.$service['title'].'</span></li>';
+
+        $this->_data['seo'] = array(
+            'seo_title' => $service['seo_title'],
+            'seo_description' => $service['seo_description'],
+            'seo_image' => $this->link_upload. '/'. $service['path_image']
+        );
+
+        $this->parser->parse($this->control ."/ai_hub.tpl", $this->_data);
     }
 
 }

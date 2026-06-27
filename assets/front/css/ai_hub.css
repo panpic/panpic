@@ -1,0 +1,625 @@
+
+
+:root {
+    --primary: #FFD700;
+    --primary-dark: #FFC500;
+    --dark: #1a1a1a;
+    --text: #333;
+    --text-light: #666;
+    --border: #e0e0e0;
+    --white: #ffffff;
+}
+
+/* ========== HERO SECTION ========== */
+.ai_hub .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.ai_hub .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ai_hub .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.ai_hub .hero-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.ai_hub .hero-highlight {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.ai_hub .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ai_hub .btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.ai_hub .btn-primary {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+.ai_hub .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.ai_hub .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.ai_hub .btn-secondary:hover {
+    background: var(--white);
+    color: var(--dark);
+}
+
+/* ========== PROBLEM SECTION ========== */
+.ai_hub .section {
+    /*padding: 4rem 2rem;*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ai_hub .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--dark);
+}
+
+.ai_hub .section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ai_hub .problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ai_hub .problem-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.ai_hub .problem-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.ai_hub .problem-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ========== SERVICES SECTION ========== */
+.ai_hub .services-section {
+    background: #f5f5f5;
+}
+
+.ai_hub .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.ai_hub .service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.ai_hub .service-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.ai_hub .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ========== FORM VALIDATION STYLES ========== */
+.ai_hub .form-group {
+    margin-bottom: 1rem;
+}
+
+.ai_hub .form-group input,
+.ai_hub .form-group select,
+.ai_hub .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.ai_hub .form-group input:focus,
+.ai_hub .form-group select:focus,
+.ai_hub .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: #fffbf0;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+/* ========== ERROR STYLES ========== */
+.ai_hub .form-group.error input,
+.ai_hub .form-group.error select,
+.ai_hub .form-group.error textarea {
+    border-color: #dc3545 !important;
+    border-width: 2px;
+    background-color: #fff5f5;
+    box-shadow: 0 0 12px rgba(220, 53, 69, 0.4),
+                inset 0 0 4px rgba(220, 53, 69, 0.1);
+    animation: errorShake 0.3s ease;
+}
+
+/* Animation: Rung lên khi error */
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Thêm icon error bên phải input */
+.ai_hub .form-group.error::after {
+    content: "⚠";
+    position: absolute;
+    right: 15px;
+    top: 30%;
+    transform: translateY(-50%);
+    color: #dc3545;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ai_hub .error-message {
+    display: none;
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    font-weight: 600;
+    padding: 0.4rem 0.5rem;
+    background-color: #ffe5e5;
+    border-radius: 3px;
+    border-left: 3px solid #dc3545;
+}
+
+.ai_hub .form-group.error .error-message {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ai_hub .success-message {
+    display: none;
+    background: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.ai_hub .success-message.show {
+    display: block;
+}
+
+.ai_hub .service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.ai_hub .service-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.ai_hub .service-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.ai_hub .service-features li {
+    padding: 0.4rem 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.ai_hub .service-features li:before {
+    content: "✓ ";
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* ========== CASE STUDY ========== */
+.ai_hub .case-study {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: var(--white);
+}
+
+.ai_hub .case-study-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.ai_hub .case-study-image {
+    background: rgba(255, 215, 0, 0.1);
+    height: 300px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.ai_hub .case-study h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.ai_hub .case-study-brand {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.ai_hub .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.ai_hub .metric {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.ai_hub .metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.ai_hub .metric-label {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+.ai_hub .case-study-text {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .ai_hub .case-study-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== PRICING SECTION ========== */
+.ai_hub .pricing-section {
+    background: var(--white);
+}
+
+.ai_hub .pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.ai_hub .tab-btn {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--border);
+    background: var(--white);
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.ai_hub .tab-btn.active {
+    background: var(--primary);
+    color: var(--dark);
+    border-color: var(--primary);
+}
+
+.ai_hub .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.ai_hub .pricing-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s;
+}
+
+.ai_hub .pricing-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.ai_hub .badge {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.ai_hub .pricing-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.ai_hub .pricing-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.ai_hub .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 1.5rem 0;
+}
+
+.ai_hub .price-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.ai_hub .pricing-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.ai_hub .pricing-features li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.ai_hub .pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.ai_hub .pricing-features li:before {
+    content: "✓ ";
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* ========== HOW IT WORKS ========== */
+.ai_hub .how-it-works {
+    background: #f5f5f5;
+}
+
+.ai_hub .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.ai_hub .step {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.ai_hub .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: var(--dark);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.ai_hub .step h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ai_hub .step p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* ========== FAQ SECTION ========== */
+.ai_hub .faq-section {
+    background: var(--white);
+}
+
+.ai_hub .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ai_hub .faq-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.ai_hub .faq-question {
+    font-weight: 600;
+    color: var(--dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.ai_hub .faq-toggle {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.ai_hub .faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.ai_hub .faq-answer {
+    display: none;
+    margin-top: 1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.ai_hub .faq-item.active .faq-answer {
+    display: block;
+}
+
+/* ========== CTA SECTION ========== */
+.ai_hub .cta-final {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.ai_hub .cta-final h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ai_hub .cta-final p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* ========== FOOTER ========== */
+.ai_hub footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid var(--primary);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .ai_hub .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .ai_hub .section-title {
+        font-size: 1.5rem;
+    }
+
+    .ai_hub .cta-buttons {
+        flex-direction: column;
+    }
+
+    .ai_hub .btn {
+        width: 100%;
+    }
+
+    .ai_hub nav {
+        display: none;
+    }
+
+    .ai_hub .pricing-card.featured {
+        transform: scale(1);
+    }
+}
+
+/* ========== UTILITY CLASSES ========== */
+.ai_hub .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ai_hub .mt-3 {
+    margin-top: 2rem;
+}

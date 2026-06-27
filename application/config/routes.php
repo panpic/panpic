@@ -33,6 +33,9 @@ $route['web-seo'] = 'home/services/webseo';
 $route['quang-cao-online'] = 'home/services/adv';
 $route['dich-vu'] = 'home/services/item';
 
+/* 27 Jun 2026*/
+$route['giai-phap-tich-hop-ai-hub'] = 'home/services/ai_hub';
+
 /* Document detail */
 $route['tai-lieu/(:any)-(:num).html'] = 'home/document/index/$1/$2';
 $route['download/(:any)-(:num).html'] = 'home/document/download/$1/$2';
@@ -83,4 +86,3 @@ $route['(:any)'] = 'home/news/index/$1'; // 'home/news/redirect_old/$1';
 /* SEO */
 $route['(rss/news.rss)'] = 'home/feed/index';
 // https://www.panpic.vn/home/sitemapblog/index
-
