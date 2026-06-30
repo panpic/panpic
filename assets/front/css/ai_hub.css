@@ -86,7 +86,7 @@
 
 /* ========== PROBLEM SECTION ========== */
 .ai_hub .section {
-    /*padding: 4rem 2rem;*/
+    padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -589,6 +589,10 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+    .ai_hub .cta-final {
+        padding: .25rem .15rem;
+    }
+
     .ai_hub .hero h1 {
         font-size: 1.8rem;
     }

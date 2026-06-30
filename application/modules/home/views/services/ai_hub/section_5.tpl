@@ -7,7 +7,7 @@
         <div class="step">
             <div class="step-number">1</div>
             <h3>Tư vấn</h3>
-            <p>Hiểu quy trình, data, tone voice của bạn. Proposal chi tiết giải pháp & timeline</p>
+            <p>Hiểu quy trình, data của bạn. Proposal chi tiết giải pháp & timeline</p>
         </div>
         <div class="step">
             <div class="step-number">2</div>

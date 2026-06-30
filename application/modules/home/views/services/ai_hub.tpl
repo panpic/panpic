@@ -13,7 +13,7 @@
     {include file="services/ai_hub/section_3.tpl"}
     {include file="services/ai_hub/section_4.tpl"}
     {include file="services/ai_hub/section_5.tpl"}
-    {include file="services/ai_hub/section_6.tpl"}
+    {**include file="services/ai_hub/section_6.tpl"**}
     {include file="services/ai_hub/section_7.tpl"}
     {include file="services/ai_hub/section_8.tpl"}
 

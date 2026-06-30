@@ -35,6 +35,7 @@ $route['dich-vu'] = 'home/services/item';
 
 /* 27 Jun 2026*/
 $route['giai-phap-tich-hop-ai-hub'] = 'home/services/ai_hub';
+$route['contact/submit-ai-hub'] = 'home/contact/submit_consultation';
 
 /* Document detail */
 $route['tai-lieu/(:any)-(:num).html'] = 'home/document/index/$1/$2';

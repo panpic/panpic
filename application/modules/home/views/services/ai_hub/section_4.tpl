@@ -3,9 +3,9 @@
     <div class="case-study-content">
         <div>
             <div class="case-study-brand">📊 Case Study</div>
-            <h2>Ruoutuongvy.com</h2>
+            <h2>Website bán sản phẩm</h2>
             <p class="case-study-text">
-                Một nền tảng e-commerce rượu vang hàng đầu Việt Nam, cần tạo 300+ mô tả sản phẩm/tháng với chất lượng cao và tối ưu SEO.
+                Một nền tảng Website bán sản phẩm hàng đầu Việt Nam, cần tạo 300+ mô tả sản phẩm/tháng với chất lượng cao và tối ưu SEO.
             </p>
 
             <div class="metrics">

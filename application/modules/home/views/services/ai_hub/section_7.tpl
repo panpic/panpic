@@ -10,7 +10,7 @@
             </div>
             <div class="faq-answer">
                 Panpic không bán plugin generic. Chúng tôi bán <strong>service + strategy</strong>:
-                <br>✓ Custom integration vào hệ thống của bạn (WordPress, custom CMS, database riêng)
+                <br>✓ Custom integration vào hệ thống của bạn (Custom CMS, database riêng)
                 <br>✓ Tuning prompt theo ngành, tone voice, data của bạn
                 <br>✓ Ongoing support & monthly optimization (không phải tự config)
                 <br>✓ Vietnamese-fluent (không generic English)
@@ -57,9 +57,7 @@
             </div>
             <div class="faq-answer">
                 Không. Chúng tôi tích hợp vào hệ thống hiện tại của bạn:
-                <br>✓ WordPress + plugin custom
-                <br>✓ Laravel/custom PHP app
-                <br>✓ Shopify + integration
+                <br>✓ Laravel/Codeigniter/Smarty/custom PHP app
                 <br>✓ Bất kỳ CMS nào
                 <br>
                 <br>Không cần downtime hay refactor existing code.
@@ -68,15 +66,15 @@
 
         <div class="faq-item">
             <div class="faq-question">
-                <span>Chi phí API (OpenAI/Claude) bao nhiêu?</span>
+                <span>Chi phí API (Gemini/OpenAI/Claude) bao nhiêu?</span>
                 <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
                 Khách trả riêng theo usage. Ước tính:
-                <br>✓ AI Writing (50 bài/tháng): 500k-1 triệu/tháng
-                <br>✓ AI Chatbot (1000 conversations/ngày): 1-2 triệu/tháng
+                <br>✓ AI Writing (100 bài/tháng): 1,5-2 triệu/tháng
+                <br>✓ AI Chatbot (1000 conversations/ngày): 10-15 triệu/tháng
                 <br>
-                <br>Chi phí này NGOÀI service fee. Chúng tôi không markup API cost.
+                <br>Chi phí này NGOÀI service fee. Chúng tôi không tính phí API.
             </div>
         </div>
 
@@ -90,7 +88,7 @@
                 <br>✓ Setup fee: trả 1 lần
                 <br>✓ Support package: 3-month minimum (sau đó cancel anytime)
                 <br>
-                <br>Vì support 3 tháng đầu là critical để tuning optimal. Sau đó bạn có thể downgrade hoặc cancel.
+                <br>Vì hỗ trợ 3 tháng đầu là rất quan trọng để điều chỉnh tối ưu. Sau đó bạn có thể hạ cấp hoặc hủy bỏ.
             </div>
         </div>
 
@@ -105,7 +103,7 @@
                 <br>✓ Monthly dashboard tracking metrics (time saved, cost reduced, quality improvement)
                 <br>✓ 30-day ROI guarantee (nếu không thấy result, hoàn tiền support)
                 <br>
-                <br>Case ruoutuongvy.com: Setup 5M, 3 tháng ROI 12M (từ tiết kiệm nhân sự).
+                <br>Case Website bán sản phẩm: Setup 20M, 3 tháng ROI 50M (từ tiết kiệm nhân sự).
             </div>
         </div>
     </div>
