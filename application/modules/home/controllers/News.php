@@ -471,6 +471,79 @@ class News extends FRONT_Controller
     }
 
     /**
+     * AUTHOR: Person detail
+     * Last update 8 Jul 2026
+     * @return mixed
+     */
+    function person()
+    {
+        error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+
+        $conNews = " admin_id = 2 AND post_type = '".POST_TYPE_BLOG."' AND content IS NOT NULL AND content != '' ";
+        $totalItems = $this->blog_model->counterBlog($conNews);
+        $this->_data['totalItems'] = $totalItems;
+
+        $curPage = 0;
+        if ($totalItems > 0) {
+            $this->load->library('pagination_blog');
+            $perPage = $this->lable['per_item_tintuc'];
+            $baseUrl = current_url();
+            $uriSegment = 4;
+            $this->pagination_blog->pagination($baseUrl, $totalItems, $perPage, $uriSegment, '');
+            $this->_data['links'] = $this->pagination->create_links();
+            $curPage = $this->input->get('per_page');
+            $offset = ($curPage) ? $curPage : 0;
+            $start = ($offset > 0) ? (($offset - 1) * $perPage) : $offset;
+            $news = $this->blog_model->getBlog($conNews, $perPage, $start);
+
+            if($news) {
+                $hot_1 = isset($news[0]) ? $news[0] : '';
+                unset($news[0]);
+
+                $hot_2 = isset($news[1]) ? $news[1] : '';
+                unset($news[1]);
+
+                $hot_3 = isset($news[2]) ? $news[2] : '';
+                unset($news[2]);
+            }
+
+            $this->_data['hot_1'] = $hot_1;
+            $this->_data['hot_2'] = $hot_2;
+            $this->_data['hot_3'] = $hot_3;
+            $this->_data['news'] = $news;
+        }
+
+        $seo_title = stripslashes($this->lable['seo_title_author_bang']);
+        $seo_description = stripslashes($this->lable['seo_description_author_bang']);
+
+        if($curPage > 1) {
+            $seo_title .= " - ".$this->lable['page']." ".$curPage;
+            $seo_description .= " - ".$this->lable['page']." ".$curPage;
+        }
+
+        $this->_data['seo'] = array(
+            'seo_title' => $seo_title,
+            'seo_description' => $seo_description,
+            'seo_image' =>  base_url('/nguyen-van-bang.webp')
+        );
+
+        $this->_data['breadcrumb'] = '
+        <li class="is-active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">Tác giả Nguyễn Văn Bàng</span>
+            <meta itemprop="position" content="2" />
+        </li>';
+
+        $this->_data['categories'] = $this->blog_model->getNodeByParentId( $this->_parent_category );
+
+        $condCategory = " WHERE post_cat_id = '$this->_parent_category' AND lang = 'vi' ";
+        $selectCategory = 'post_cat_id, cat_name, cat_slug, seo_title, seo_description';
+        $category = $this->main_model->menuCatBlogs($condCategory, $selectCategory, true);
+        $this->_data['category'] = $category;
+
+        $this->parser->parse($this->control."/person.tpl", $this->_data);
+    }
+
+    /**
      * @param $slug
      * @return mixed
      */

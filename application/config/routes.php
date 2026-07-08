@@ -71,6 +71,8 @@ $route['tim-kiem'] = 'home/search/item';
 $route['tin-tuc/(:any)'] = 'home/news/category/$1';
 $route['tin-tuc'] = 'home/news/news';
 $route['author/panpicteam'] = 'home/news/authors';
+$route['author/nguyen-van-bang'] = 'home/news/person';
+
 $route['web-blog'] = 'home/news/web_blog';
 $route['web-blog/(:any)'] = 'home/news/index/$1';
 $route['faq'] = 'home/news/faq';
