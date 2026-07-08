@@ -16,11 +16,15 @@ class Media extends MY_Controller{
 
 
     private $_post_type;
+    public $path_upload;
 
     public function __construct(){
         parent::__construct();
 
         $this->_post_type = POST_TYPE_OTHER;
+
+        $this->load->library('webp_lib');
+        $this->path_upload = $this->_path_upload;
 
         $this->_data['dir_path']  = $this->_path_upload;
         $this->_data['link_upload']  = $this->_link_upload;
@@ -58,14 +62,14 @@ class Media extends MY_Controller{
         $super_admin = $this->config->item("super_admin");
         if($session_admin->adminRole != $super_admin) {
             if($this->admin_permission->myPermission($this->_control, $adminPermission) == false) {
-                redirect(admin_url('index/notpermission')); 
+                redirect(admin_url('index/notpermission'));
             }
         }
     }
 
     /**
-     * Form add  
-     * 
+     * Form add
+     *
      */
     function index(){
         error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
@@ -254,7 +258,7 @@ class Media extends MY_Controller{
             $more_url .= "q=$keyword";
             $this->_data['search'] = $keyword;
         }
-        
+
         if($category) {
             $cond .= " AND c.category = $category ";
             $more_url .= ($more_url == '') ? "cat=$category" : "&cat=$category";
@@ -272,23 +276,23 @@ class Media extends MY_Controller{
             $cond .= ($cond != '') ? ' AND ' : '';
             $cond .= " object_id = 0 ";
         }
-        
+
         $cond_items = ($cond != '') ? " WHERE $cond " : ''; // " WHERE c.post_type = '$this->_post_type' $cond GROUP BY c.id ";
         $cond_total = ($cond != '') ? " WHERE $cond " : ''; // " WHERE c.post_type = '$this->_post_type' $cond ";
 
         $totalItems  = $this->media_model->countItems($cond_total);
-        $per_page    = $this->lable['per_item_admin']; 
+        $per_page    = $this->lable['per_item_admin'];
         $base_url    = admin_url('media/items');
         $uri_segment = 4;
-        $this->load->library('pagination_library'); 
-        $this->pagination_library->pagination($base_url, $totalItems, $per_page, $uri_segment, $more_url, $more_url); 
+        $this->load->library('pagination_library');
+        $this->pagination_library->pagination($base_url, $totalItems, $per_page, $uri_segment, $more_url, $more_url);
         $this->_data['links'] = $this->pagination->create_links();
-        
+
         $curpage = $this->input->get('per_page');
-        $offset = ($curpage) ? $curpage : 0;      
+        $offset = ($curpage) ? $curpage : 0;
         $start = ($offset > 0) ? (($offset - 1) * $per_page) : $offset;
         $this->_data['items'] = $this->media_model->getItems($cond_items, $per_page, $start);
-        
+
         $this->parser->parse("media/items.tpl", $this->_data);
     }
 

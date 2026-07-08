@@ -102,7 +102,7 @@ Class MY_Controller extends CI_Controller
         if($login->adminLogin){
             $username = $login->adminLogin;
             // Tạo 1 cookie riêng cho CKFinder, sống 2 tiếng (7200s), path '/' để dùng toàn web
-            $ckf_token = md5($username . 'ckfinder_locnuocbachkhoa');
+            $ckf_token = md5($username . 'ckfinder_panpic');
             setcookie('ckf_auth_token', $ckf_token, time() + 7200, '/');
         }
     }

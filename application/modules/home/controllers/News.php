@@ -53,6 +53,7 @@ class News extends FRONT_Controller
         $id = $news['blog_id'];
         $news['content'] = $this->blog_lib->escape_code_blocks($news['content']);
         $this->_data['news'] = $news;
+        // pre($news);
 
         $category_id = $news['category_id'];
         $per_item_news_related = ($this->isMobile == DETECT_MOBILE) ? 5 : $this->lable['per_item_news_related'];

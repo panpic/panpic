@@ -1,7 +1,7 @@
 ﻿{if $seo.seo_image neq ''}{assign var=img_seo value=$seo.seo_image}{else}{assign var=img_seo value="`$lable.avatar_default`"}{/if}
 <script type="application/ld+json">
 {
-    "@context":"http:\/\/schema.org\/",
+    "@context":"https://schema.org/",
     "@type":"NewsArticle",
     "mainEntityOfPage":
     {
@@ -15,7 +15,7 @@
     "publisher":
     {
         "@type":"Organization",
-        "@id":"https:\/\/www.panpic.vn\/#organization",
+        "@id":"https://www.panpic.vn/#organization",
         "name":"CÔNG TY TNHH CÔNG NGHỆ PANPIC",
         "logo":
             {

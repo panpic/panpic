@@ -31,20 +31,7 @@
 								TAGS: {foreach from=$tags item=vl}<a href="{$vl.slug|url_blog_tags}" title="{$vl.title|stripslashes}" class="btn btn-outline-dark mt-2">{$vl.title|stripslashes}</a>{/foreach}
 							</div>
 							{/if}
-							<div class="col-12 col-md-12">
-								<div class="author-about">About the Author</div>
-								<div class="author-wrap">
-									<div class="author-avatar">
-										<img src="https://www.panpic.vn/assets/front/images/logo.png" height="64" width="64" alt="Panpic Editorial Team">
-									</div>
-									<div class="author-info">
-										<div class="author-name">
-											<a href="https://www.panpic.vn/author/panpicteam">Panpic Editorial Team</a>
-										</div>
-										<div class="author-description">{$news.date_add|date_format:"%d/%m/%Y"}</div>
-									</div>
-								</div>
-							</div>
+
 							<div class="col-md-12">
 								<ul class="social-share d-flex m-0">
 									<li class="me-2 category mt-1">Share</li>
@@ -53,6 +40,15 @@
 									<li><a href="https://www.linkedin.com/shareArticle?mini=true&url={$current_url}" aria-label="Chia sẻ bài viết lên linked" target="_blank"><i class="fa bi-linkedin"></i></a></li>
 								</ul>
 							</div>
+							
+							<div class="col-12 col-md-12">
+								{if $news.admin_id eq 2}
+									{include file="news/author_bang.tpl"}
+								{else}
+									{include file="news/author_panpic.tpl"}
+								{/if}
+							</div>
+
 							{if $form_app eq ACTIVE}
 								<div class="row">
 									<div class="col-sm-5 col-md-5">

@@ -1,7 +1,7 @@
 CREATE
 -- ALTER
 VIEW view_blog AS
-SELECT a.blog_id, a.category_id, a.post_type, a.date_add, a.last_update, a.hits,
+SELECT a.blog_id, a.category_id, a.post_type, a.date_add, a.last_update, a.hits, a.admin_id, 
 	b.lang, b.slug, b.title, b.short, b.content, b.seo_title, b.seo_description, b.home_status,
 	i.image_type, i.path_image, i.path_image_thumb, c.cat_name, c.cat_slug
 FROM pp_blog AS a
