@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="{$base_tlp_front}/libs/fancybox/jquery.fancybox.min.css">
 	{/if}
 	<link rel="stylesheet" href="{$base_tlp_front}/css/main.min.css?ver=7.3">
-	<link rel="stylesheet" href="{$base_tlp_front}/css/custom.min.css?ver=8.5">
+	<link rel="stylesheet" href="{$base_tlp_front}/css/custom.min.css?ver=8.6">
 	{if $control eq 'news' && $action eq 'index'}
 	<link rel="stylesheet" href="{$base_tlp_front}/css/prism.min.css?ver=1.1">
 	{/if}

@@ -52,8 +52,8 @@
     "author":
     {
         "@type":"Person",
-        "name":"Bang Nguyen",
-        "url":"https:\/\/www.panpic.vn\/author\/panpicteam\/",
+        "name":"Panpic Editorial Team",
+        "url":"https://www.panpic.vn/author/panpicteam",
         "description":"{$lable.schema_author_description}",
         "image":
             {

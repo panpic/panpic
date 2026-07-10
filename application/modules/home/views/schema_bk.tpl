@@ -10,7 +10,7 @@
             "logo":{"@type":"ImageObject", "@id":"https://www.panpic.vn/#logo", "url":"https://www.panpic.vn/assets/front/images/logo.png", "width":97, "height":97, "caption":"THIET KE WEB PANPIC"},
             "description":"Công ty thiết kế web PANPIC. Website cao cấp tốc độ tải load nhanh dưới 5 giây. Thiết kế web chuyên nghiệp uy tín nâng tầm thương hiệu doanh nghiệp",
             "disambiguatingDescription":"Công ty THIET KE WEB PANPIC cung cấp dịch vụ thiết kế website giúp công ty doanh nghiệp hiển thị trên môi trường trực tuyến - internet một cách chuyên nghiệp",
-            "location":{"@type":"PostalAddress", "name":"trụ sở chính", "streetAddress":"23/1 Mai Lão Bạng, phường 13", "addressLocality":"Tân Bình", "addressRegion":"Hồ chí minh", "addressCountry":"Việt Nam"},
+            "location":{"@type":"PostalAddress", "name":"trụ sở chính", "streetAddress":"23/1 Mai Lão Bạng", "addressLocality":"Tân Bình", "addressRegion":"Hồ chí minh", "addressCountry":"Việt Nam"},
             "sameAs":["https://www.facebook.com/panpic.vn/","https://www.linkedin.com/company/panpic/","https://www.instagram.com/panpic.vn/","https://twitter.com/panpic_vn/","https://panpic-technology.business.site/"],
             "contactPoint":{"@type":"contactPoint", "email":"contact@panpic.vn", "telephone":"+84986973897", "areaServed":"VN"},
             "vatID":"0312405996",

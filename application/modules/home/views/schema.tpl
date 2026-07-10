@@ -7,10 +7,11 @@
 {if $control eq 'news' && $action eq 'index'}
     {if $news.admin_id eq 2}
         {include file="widget/schema_personal.tpl"}
+        {include file="widget/schema-blog-bang.tpl"}
     {else}
         {include file="widget/schema_article.tpl"}
+        {include file="widget/schema-blog.tpl"}
     {/if}
-    {include file="widget/schema-blog.tpl"}
 {/if}
 {if $control eq 'contact'}
     {include file="widget/schema_contact.tpl"}

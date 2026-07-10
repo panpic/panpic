@@ -151,7 +151,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/thietkewebsite.tpl", $this->_data);
@@ -202,7 +203,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/index.tpl", $this->_data);
@@ -252,7 +254,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/index.tpl", $this->_data);
@@ -302,7 +305,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/index.tpl", $this->_data);
@@ -351,7 +355,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/index.tpl", $this->_data);
@@ -401,7 +406,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/index.tpl", $this->_data);
@@ -449,7 +455,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/index.tpl", $this->_data);
@@ -497,7 +504,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/index.tpl", $this->_data);
@@ -546,7 +554,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control."/index.tpl", $this->_data);
@@ -591,7 +600,8 @@ class Services extends FRONT_Controller
         $this->_data['seo'] = array(
             'seo_title' => $service['seo_title'],
             'seo_description' => $service['seo_description'],
-            'seo_image' => $this->link_upload. '/'. $service['path_image']
+            'seo_image' => $this->link_upload. '/'. $service['path_image'],
+            'seo_image_alt' => $service['seo_title'],
         );
 
         $this->parser->parse($this->control ."/ai_hub.tpl", $this->_data);

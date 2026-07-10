@@ -477,3 +477,5 @@ $lang['home_service_note']='<strong>Dịch vụ thiết kế website doanh nghi�
 $lang['home_why_note']='Vì sao doanh nghiệp chọn Panpic?';
 $lang['why_choose_5_title']='<span class=\"dropcap4\">T</span>ối ưu ngân sách lâu dài';
 $lang['why_choose_6_title']='<span class=\"dropcap4\">Đ</span>ội ngũ kỹ thuật đồng hành lâu dài';
+$lang['seo_title_author_bang']='Tác giả Nguyễn Văn Bàng Founder & CEO tại Panpic';
+$lang['seo_description_author_bang']='Nguyễn Văn Bàng là Founder & CEO của Panpic, với hơn 15 năm kinh nghiệm trong lĩnh vực phát triển website doanh nghiệp, tối ưu hiệu năng (Website Performance), Technical SEO và triển khai các giải pháp AI ứng dụng trong hoạt động kinh doanh';

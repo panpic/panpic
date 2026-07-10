@@ -8,8 +8,8 @@
     "https://www.panpic.vn/files/2025/06/03/013207-033255-slide2_new2.jpg","https://www.panpic.vn/files/2025/06/03/013258-022232.webp",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "23/1 Mai Lão Bạng, Phường 13",
-        "addressLocality": "Quận Tân Bình",
+        "streetAddress": "23/1 Mai Lão Bạng",
+        "addressLocality": "Tân Bình",
         "addressRegion": "Hồ Chí Minh",
         "postalCode": "71079",
         "addressCountry": "VN"

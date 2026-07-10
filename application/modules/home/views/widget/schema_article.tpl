@@ -9,7 +9,8 @@
     "author":
     {
         "@type": "Person",
-        "name": "Nguyễn Văn Bàng"
+        "name": "Nguyễn Văn Bàng",
+        "url": "https://www.panpic.vn/author/nguyen-van-bang"
     },
     "publisher":
     {

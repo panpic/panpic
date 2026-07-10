@@ -18,6 +18,9 @@
         "url":"{$img_seo}"
     },
     "author":{
+        "url":"{$base_url}/author/nguyen-van-bang",
+        "name":"Nguyễn Văn Bàng",
+        "@type":"Person",
         "@id":"https://www.panpic.vn/#person"
     },
     "publisher":{

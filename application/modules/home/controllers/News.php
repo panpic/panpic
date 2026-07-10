@@ -81,6 +81,13 @@ class News extends FRONT_Controller
         </li>';
 
         $seo_last_update = ($news['last_update'] != '') ? $news['last_update'] : strtotime($news['date_add']);
+
+        $article_content = $news['content'];
+        $content = strip_tags($article_content);
+        $content = html_entity_decode($content, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $content = preg_replace('/\s+/u', ' ', trim($content));
+        $wordCount = count(preg_split('/\s+/u', $content));
+
         $this->_data['seo'] = array(
             'seo_title' => stripslashes($news['seo_title']),
             'seo_description' => stripslashes($news['seo_description']),
@@ -93,6 +100,7 @@ class News extends FRONT_Controller
             'dateModified'  => date(DATE_ATOM, $seo_last_update),
 
             'seo_image_alt' => stripslashes($news['title']),
+            'word_count' => $wordCount
         );
 
         $this->_data['categories'] = $this->blog_model->getNodeByParentId( $this->_parent_category );

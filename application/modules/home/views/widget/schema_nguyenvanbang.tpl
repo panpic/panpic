@@ -12,6 +12,6 @@
     "worksFor":{
         "@id":"https://www.panpic.vn/#organization"
     },
-    "description":"Founder & CEO Panpic..."
+    "description":"{$lable.seo_description_author_bang}"
 }
 </script>

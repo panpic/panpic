@@ -1,0 +1,136 @@
+﻿{if $seo.seo_image neq ''}{assign var=img_seo value=$seo.seo_image}{else}{assign var=img_seo value="`$lable.avatar_default`"}{/if}
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "mainEntityOfPage":
+    {
+        "@type":"WebPage",
+        "@id":"{$current_url}"
+    },
+    "url":"{$current_url}",
+    "headline":"{$seo.seo_title|replace:'"':''}",
+    "datePublished":"{$seo.datePublished}",
+    "dateModified":"{$seo.dateModified}",
+    "inLanguage":"vi-VN",
+    "isAccessibleForFree":true,
+    "publisher":
+    {
+        "@type":"Organization",
+        "@id":"https://www.panpic.vn/#organization",
+        "url":"https://www.panpic.vn",
+        "name":"CÔNG TY TNHH CÔNG NGHỆ PANPIC",
+        "logo":
+            {
+                "@type":"ImageObject",
+                "url":"https://www.panpic.vn/panpic-logo.png",
+                "width":971,
+                "height":210
+            }
+    },
+    "image":{
+        "@type":"ImageObject",
+        "@id":"{$img_seo}#primaryimage",
+        "url":"{$img_seo}",
+        "width":790,
+        "height":510,
+        "caption":"{$seo.seo_image_alt}",
+        "representativeOfPage":true,
+        "encodingFormat":"image/webp",
+        "description":"{$seo.seo_description|replace:'\"':''}",
+        "creator":{
+            "@type":"Person",
+            "@id":"https://www.panpic.vn/#person"
+        },
+        "copyrightHolder":{
+            "@type":"Organization",
+            "@id":"https://www.panpic.vn/#organization"
+        },
+        "creditText":"Panpic",
+        "copyrightNotice":"© {$smarty.now|date_format:"%Y"} Panpic",
+        "license":"https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "acquireLicensePage":"https://www.panpic.vn/lien-he"
+    },
+    "articleSection":"{$seo.articleSection|replace:'"':''}",
+    "description":"{$seo.seo_description|replace:'"':''}",
+    "wordCount":{$seo.word_count},
+    "author":
+    {
+        "@id":"https://www.panpic.vn/#person",
+        "@type":"Person",
+        "name":"Nguyễn Văn Bàng",
+        "url":"{$base_url}/author/nguyen-van-bang",
+        "jobTitle":"Founder & CEO",
+        "description":"{$lable.seo_description_author_bang}",
+        "image":
+            {
+                "@type":"ImageObject",
+                "@id":"https://www.panpic.vn/#person-image",
+                "url":"https://www.panpic.vn/nguyen-van-bang.webp",
+                "height":1204,
+                "width":1249
+            },
+        "worksFor":{
+            "@id":"https://www.panpic.vn/#organization"
+        },
+        "sameAs":[
+            "https://github.com/panpic",
+            "https://webdesignviet.wordpress.com/nguyen-van-bang/",
+            "https://www.linkedin.com/in/bangphpdeveloper/",
+            "https://www.behance.net/nhantam",
+            "https://www.facebook.com/bang.panpic/",
+            "https://www.youtube.com/@PanpicVn",
+            "https://panpic.tumblr.com",
+            "https://www.pinterest.com/panpic_vn",
+            "https://www.instagram.com/panpic.vn/",
+            "https://x.com/panpic_vn",
+            "https://g.co/kgs/ZmL8aup",
+            "https://www.reddit.com/user/Ok-Ad-1237/",
+            "https://www.flickr.com/photos/phpdeveloper/"
+        ]
+    },
+    "keywords":[
+        "AI SEO",
+        "ChatGPT",
+        "Content SEO",
+        "AI Content"
+    ],
+    "about":[
+        {
+            "@type":"Thing",
+            "name":"Artificial Intelligence",
+            "sameAs":"https://en.wikipedia.org/wiki/Artificial_intelligence"
+        },
+        {
+            "@type":"Thing",
+            "name":"Search engine optimization",
+            "sameAs":"https://en.wikipedia.org/wiki/Search_engine_optimization"
+        },
+        {
+            "@type":"Thing",
+            "name":"Content marketing",
+            "sameAs":"https://en.wikipedia.org/wiki/Content_marketing"
+        }
+    ],
+    "mentions":[
+        {
+            "@type":"Thing",
+            "name":"ChatGPT",
+            "sameAs":"https://chatgpt.com/"
+        },
+        {
+            "@type":"Thing",
+            "name":"Claude",
+            "sameAs":"https://claude.ai/"
+        },
+        {
+            "@type":"Thing",
+            "name":"Gemini",
+            "sameAs":"https://gemini.google.com/"
+        }
+    ],
+    "isPartOf":{
+        "@id":"https://www.panpic.vn/#website"
+    }
+}
+</script>
