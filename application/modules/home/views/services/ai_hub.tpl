@@ -19,7 +19,7 @@
 
 </main>
 {include file="services/rating.tpl"}
-{include file="services/schema_faq.tpl"}
+{include file="services/schema_faq_ai_hub.tpl"}
 {include file="footer.tpl"}
 
 <script src="{$base_tlp_front}/js/ai_hub.js?ver=1.0"></script>

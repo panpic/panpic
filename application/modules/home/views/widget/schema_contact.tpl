@@ -7,7 +7,7 @@
       "@id": "https://www.panpic.vn/lien-he/#webpage",
       "url": "https://www.panpic.vn/lien-he",
       "name": "Liên hệ Panpic - Công ty thiết kế website uy tín tại TP.HCM",
-      "description": "Liên Hệ Công Ty TNHH Công Nghệ Panpic. Thiết kế website đẹp, chuẩn SEO, giúp doanh nghiệp bứt phá doanh thu. Gọi ngay!, Quận Tân Bình, TP.HCM. SĐT: 0986 97 38 97.",
+      "description": "Liên Hệ Công Ty TNHH Công Nghệ Panpic. Thiết kế website đẹp, chuẩn SEO, giúp doanh nghiệp bứt phá doanh thu. Gọi ngay!, Phường Tân Bình, TP.HCM. SĐT: 0986973897.",
       "isPartOf": {
         "@id": "https://www.panpic.vn/#website"
       },

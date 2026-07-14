@@ -8,7 +8,7 @@
     "name": "CÔNG TY TNHH CÔNG NGHỆ PANPIC",
     "alternateName": [
         "Panpic",
-        "Dịch vụ thiết kế website Panpic"
+        "Thiết kế website Panpic"
     ],
     "url": "https://www.panpic.vn",
     "email": "contact@panpic.vn",
@@ -17,7 +17,7 @@
     "image": "https://www.panpic.vn/assets/front/images/logo.png",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "23/1 Mai Lão Bạng, Phường 13, Quận Tân Bình",
+        "streetAddress": "23/1 Mai Lão Bạng, Phường Tân Bình",
         "addressLocality": "Hồ Chí Minh",
         "addressCountry": "VN",
         "postalCode": "700000"
